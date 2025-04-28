@@ -24,7 +24,6 @@ body{
       bottom: 15px;
       font-size: 32px;
       font-weight: bold;
-      padding-left: 80px;
     }
   
     #header>.innerbox>#utilitybar{
@@ -60,5 +59,23 @@ body{
   
     #header a:hover{
       color: blue  ;
+    }
+
+    #section{
+      width: 1000px;
+      margin: 0 auto;
+      background-color: aqua;
+      position: relative;
+    }
+
+    #section article{
+      float: left;
+    }
+
+    #section article>p{
+      position: absolute;
+      top: 380px;
+      right: 300px;
+      color: white;
     }
   
