@@ -26,7 +26,7 @@ body{
     bottom: 15px;
   }
 
-  #header>.innerbox>#utilitybar>li{
+  #header>.innerbox>#utilitybar li{
     display: inline;
     margin-left: 10px;
     opacity: 0.3;
@@ -38,7 +38,7 @@ body{
     bottom: 0px;
   }
 
-  #header>.innerbox>#globalbar>li{
+  #header>.innerbox>#globalbar li{
     display: inline;
     margin-right: 30px;
   }
@@ -77,12 +77,14 @@ body{
   #mainimg>.innerbox>h1{
     position: absolute;
     font-size: 90px;
+    color: aliceblue;
     z-index: 2;
   }
 
   #mainimg>.innerbox>p{
     position: absolute;
     top: 90px;
+    color: aliceblue;
     z-index: 3;
   }
 
@@ -135,5 +137,24 @@ body{
     width: 1000px;
     height: 100px;
     margin: 0 auto;
+    position: relative;
     background-color: red;
+  }
+
+  #footer>.innerbox>h1{
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+    color: white;
+  }
+
+  #footer>.innerbox>ul{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    color: white;
+  }
+
+  #footer>.innerbox>ul li{
+    display: inline;
   }
