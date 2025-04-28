@@ -1,0 +1,64 @@
+body{
+    font-family: Verdana, Geneva, sans-serif;
+  }
+  
+  #header{
+      width: 100%;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid black;
+    }
+  
+    #header>.innerbox{
+      width: 1180px;
+      height: 120px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    #header>.innerbox>h1{
+      position: absolute;
+      left: 10px;
+      bottom: 15px;
+      font-size: 32px;
+      font-weight: bold;
+      padding-left: 80px;
+    }
+  
+    #header>.innerbox>#utilitybar{
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      padding-right: 80px;
+    }
+  
+    #header>.innerbox>#utilitybar li{
+      display: inline;
+      margin-right: 15px;
+      opacity: 0.3;
+    }
+  
+    #header>.innerbox>#globalbar{
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      padding-bottom: 15px;
+      padding-right: 80px;
+    }
+  
+    #header>.innerbox>#globalbar li{
+      display: inline;
+      margin-right: 45px;
+    }
+  
+    #header a{
+      text-decoration-line: none;
+      color: black ;
+    }
+  
+    #header a:hover{
+      color: blue  ;
+    }
+  
