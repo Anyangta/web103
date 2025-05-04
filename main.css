@@ -103,18 +103,17 @@ body{
     width: 1180px;
     height: 450px;
     margin: 0 auto;
-    overflow: hidden;
     position: relative;
     text-align: center;
   }
   #section>.innerbox {
-    display: inline-block;
+    margin-left: 70px;
     overflow: hidden;
   }
   
   #section>h2{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-weight: bold;
 
   }
@@ -122,8 +121,7 @@ body{
   #section>.innerbox>.article{
     width: 230px;
     height: 300px;    
-    margin: 10px 10px auto;
-    padding-right: 10px;
+    margin-right: 40px;
     float: left;
   }
   
