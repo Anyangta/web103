@@ -28,7 +28,6 @@ body{
     position: absolute;
     top: 20px;
     right: 30px;
-    padding-right: 80px;
   }
 
   
@@ -44,7 +43,7 @@ body{
     right: 0px;
     bottom: 0px;
     padding-bottom: 15px;
-    padding-right: 80px;
+    
   }
 
   #header>.innerbox>#globalbar li{
@@ -64,38 +63,35 @@ body{
   #mainimg{
     width: 100%;
     height: 590px;
-    overflow: hidden;
+    position: relative;
+  }
+
+  #mainimg>img{
+    width: 100%;
+    height: 590px;
+    object-fit: cover;
   }
 
   #mainimg>.innerbox{
     width: 800px;
     height: 300px;
     font-size: 25px;
+    position: absolute;
     margin: 0 auto;
-    position: relative;
+    left: 0;
+    right: 0;
     top: 150px;
   }
 
-  #mainimg>.innerbox>img{
-    position: absolute;
-    left: -190px;
-    top: -150px;
-    z-index: 1;
-  }
-
   #mainimg>.innerbox>h1{
-    position: absolute;
-    font-size: 90px;
+    font-size: 80px;
     color: white;
-    z-index: 2;
     font-weight: bold;
   }
 
   #mainimg>.innerbox>p{
-    position: absolute;
     top: 100px;
     color: white;
-    z-index: 3;
     line-height: 1.3;
   }
 
