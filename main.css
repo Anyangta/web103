@@ -108,6 +108,7 @@ body{
   }
   #section>.innerbox {
     margin-left: 70px;
+    margin-right: 70px;
     overflow: hidden;
   }
   
@@ -121,7 +122,7 @@ body{
   #section>.innerbox>.article{
     width: 230px;
     height: 300px;    
-    margin-right: 40px;
+    padding-right: 40px;
     float: left;
   }
   
