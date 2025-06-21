@@ -1,0 +1,104 @@
+body{
+    font-family: Verdana, Geneva, sans-serif;
+    padding-top: 120px;
+  }
+  
+  #header{
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 2;
+      background-color: white;
+      border-bottom: 1px solid black;
+      
+    }
+  
+    #header>.innerbox{
+      width: 1180px;
+      height: 120px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    #header>.innerbox>h1{
+      position: absolute;
+      left: 10px;
+      bottom: 15px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+  
+    #header>.innerbox>#utilitybar{
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+  
+    
+  
+    #header>.innerbox>#utilitybar li{
+      display: inline;
+      margin-right: 15px;
+      opacity: 0.3;
+    }
+  
+    #header>.innerbox>#globalbar{
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      padding-bottom: 15px;
+      
+    }
+  
+    #header>.innerbox>#globalbar li{
+      display: inline;
+      margin-right: 45px;
+    }
+  
+    #header a{
+      text-decoration-line: none;
+      color: black ;
+    }
+  
+    #header a:hover{
+      color: blue  ;
+    }
+
+    #section{
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    #section article{
+      position: relative;
+      float: left;
+      margin-top: 10px;
+    }
+
+    #section article>p{
+      position: absolute;
+      color: white;
+      font-size: 30px; 
+    }
+
+    #section article>.innerbox{
+      width: 450px;
+      height: 150px;
+      position: absolute;
+      bottom: 40px;
+      right: 30px;
+      font-size: 20px;
+      line-height: 2;
+      color: white;
+    }
+
+    #section article>.innerbox>p::before{
+      font-size: 30px;
+      content: 'Programmer';
+    }
+
+    #section article>.innerbox p::after{
+      font-size: 30px;
+      content: 'the Digital Nomad!';
+    }
+  
