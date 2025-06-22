@@ -59,7 +59,8 @@ body {
 #mainimg img {
   width: 100%;
   height: 590px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #mainimg .innerbox {
   width: 800px;
@@ -152,6 +153,4 @@ body {
   margin: 0 auto;
   line-height: 1.3;
   font-size: 12px;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
