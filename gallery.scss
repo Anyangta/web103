@@ -79,12 +79,41 @@ body{
   article{
     position: relative;
     float: left;
-    margin-top: 10px;
+
+    img{
+      margin-top: 10px;
+      display: block;
+    }
 
     p{
       position: absolute;
       color: white;
       font-size: 30px;
+
+      &.color_gold{
+        color: gold;
+      }
+
+      &.font{
+        font-size: 50px;
+      }
+    }
+
+    .msg{
+      position: absolute;
+      top: 160px;
+      left: 90px;
+      width: 300px;
+
+      p{
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    &.right{
+      float: right;
     }
 
     .innerbox{
@@ -92,11 +121,12 @@ body{
       position: absolute;
       bottom: 40px;
       right: 30px;
-      font-size: 20px;
       line-height: 2;
       color: white;
 
       p{
+        font-size: 20px;
+
         &::before{
           font-size: 30px;
           content: 'Programmer';
@@ -108,5 +138,45 @@ body{
         }
       }
     }
+  }
+}
+
+
+article:nth-of-type(1){
+  p{
+    right: 10px;
+    bottom: 10px;
+  }
+    margin-right: 10px;
+
+}
+
+article:nth-of-type(2){
+  p{
+    left: 10px;
+    top: 50px;
+  }
+}
+
+article:nth-of-type(3){
+  p{
+    right: 10px;
+    bottom: 20px;
+  }
+}
+
+
+article:nth-of-type(7){
+  p{
+    right: 20px;
+    bottom: 30px;
+  }
+}
+
+article:nth-of-type(8){
+  p{
+    top: 165px;
+    left: 180px;
+    text-shadow: 1px 1px black;
   }
 }
