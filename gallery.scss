@@ -1,19 +1,14 @@
-$font-stack: Verdana, Geneva, sans-serif;
-$text-color: black;
-$link-hover-color: blue;
-$header-height: 120px;
-$container-width: 1180px;
-$article-box-width: 450px;
-$article-box-height: 150px;
 
-@mixin box-center($width, $height) {
-  width: $width;
-  height: $height;
+@function box-center($width, $height){
+  @return(
+    width: $width,
+    height: $height
+  );
 }
 
 body{
-  font-family: $font-stack;
-  padding-top: $header-height;
+  font-family: Verdana, Geneva, sans-serif;
+  padding-top: 120px;
 }
 
 #header{
@@ -25,7 +20,7 @@ body{
   border-bottom: 1px solid black;
 
   .innerbox{
-    @include box-center($container-width,$header-height);
+    @include box-center(1180px,120px);
     margin: 0 auto;
     position: relative;
 
@@ -64,10 +59,10 @@ body{
 
   a{
     text-decoration: none;
-    color: $text-color;
+    color: black;
 
     &:hover{
-      color: $link-hover-color;
+      color: blue;
     }
   }
 }
@@ -117,7 +112,7 @@ body{
     }
 
     .innerbox{
-      @include box-center($article-box-width,$article-box-height);
+      @include box-center(450px,150px);
       position: absolute;
       bottom: 40px;
       right: 30px;
