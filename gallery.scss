@@ -1,0 +1,177 @@
+
+@function box-center($width, $height){
+  @return(
+    width: $width,
+    height: $height
+  );
+}
+
+body{
+  font-family: Verdana, Geneva, sans-serif;
+  padding-top: 120px;
+}
+
+#header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  border-bottom: 1px solid black;
+
+  .innerbox{
+    @include box-center(1180px,120px);
+    margin: 0 auto;
+    position: relative;
+
+    h1{
+      position: absolute;
+      left: 10px;
+      bottom: 15px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    #utilitybar{
+      position: absolute;
+      top: 20px;
+      right: 30px;
+
+      li{
+        display: inline;
+        margin-right: 15px;
+        opacity: 0.3;
+      }
+    }
+
+    #globalbar{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding-bottom: 15px;
+
+      li{
+        display: inline;
+        margin-right: 45px;
+      }
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+
+    &:hover{
+      color: blue;
+    }
+  }
+}
+
+#section{
+  width: 1000px;
+  margin: 0 auto;
+
+  article{
+    position: relative;
+    float: left;
+
+    img{
+      margin-top: 10px;
+      display: block;
+    }
+
+    p{
+      position: absolute;
+      color: white;
+      font-size: 30px;
+
+      &.color_gold{
+        color: gold;
+      }
+
+      &.font{
+        font-size: 50px;
+      }
+    }
+
+    .msg{
+      position: absolute;
+      top: 160px;
+      left: 90px;
+      width: 300px;
+
+      p{
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    &.right{
+      float: right;
+    }
+
+    .innerbox{
+      @include box-center(450px,150px);
+      position: absolute;
+      bottom: 40px;
+      right: 30px;
+      line-height: 2;
+      color: white;
+
+      p{
+        font-size: 20px;
+
+        &::before{
+          font-size: 30px;
+          content: 'Programmer';
+        }
+
+        &::after{
+          font-size: 30px;
+          content: 'the Digital Nomad!';
+        }
+      }
+    }
+  }
+}
+
+
+article:nth-of-type(1){
+  p{
+    right: 10px;
+    bottom: 10px;
+  }
+    margin-right: 10px;
+
+}
+
+article:nth-of-type(2){
+  p{
+    left: 10px;
+    top: 50px;
+  }
+}
+
+article:nth-of-type(3){
+  p{
+    right: 10px;
+    bottom: 20px;
+  }
+}
+
+
+article:nth-of-type(7){
+  p{
+    right: 20px;
+    bottom: 30px;
+  }
+}
+
+article:nth-of-type(8){
+  p{
+    top: 165px;
+    left: 180px;
+    text-shadow: 1px 1px black;
+  }
+}
