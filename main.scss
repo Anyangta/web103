@@ -1,112 +1,138 @@
+$font-style: "Verdana", "Geneva", sans-serif;
 
-@function box-center($width, $height){
-  @return(
-    width: $width,
-    height: $height
-  );
+$boxSize: (
+    widthAll : 100%,
+    mainImg_height : 590px,
+    section_width : 1180px,
+    section_height : 450px
+);
+
+$innerbox:(
+    header_width : 1180px,
+    header_height : 120px,
+    mainImg_width : 800px,
+    mainImg_height : 300px,
+    footer_width : 1000px,
+    footer_height : 100px
+);
+
+$colors: white, blue, black, gold;
+
+@mixin positionSet($top, $right, $bottom, $left){
+  @if $top != null{
+    top: $top;
+  }
+  
+  @if $right != null{
+    right: $right;
+  }
+
+  @if $bottom != null{
+    bottom: $bottom;
+  }
+
+  @if $left != null{
+    left: $left;
+  }
 }
 
 
+@mixin boxSizeSet($width, $height){
+  @if $width != null{
+    width: $width;
+  }
+
+  @if $height != null{
+    height: $height;
+  }
+
+}
 body{
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: $font-style;
 }
 
 #header{  
-  width: 100%;
-  background-color: white;
+  @include boxSizeSet(map-get($boxSize,widthAll),null);
+  background-color: nth($colors,1);
   border-bottom: 1px solid black;
 
   .innerbox{
-    @include box-center(1180px,120px);
+    @include boxSizeSet(map-get($innerbox,header_width), map-get($innerbox,header_height));
     margin: 0 auto;
     position: relative;
 
     h1{
       position: absolute;
-      left: 10px;
-      bottom: 15px;
+      @include positionSet(null, null, 15px, 10px);
       font-size: 32px;
       font-weight: bold;
     }
-
   }
 
-}
+  a{
+    text-decoration: none;
+    color: nth($colors,3);
 
+    &:hover{
+        color: nth($colors,2);
+    }
+  }
+}
 
 #utilitybar{
   position: absolute;
-  top: 20px;
-  right: 30px;
+  @include positionSet(20px, 30px, null, null);
 
   li{
     display: inline;
     margin-right: 15px;
     opacity: 0.3;
   }
-
 }
 
 #globalbar{
   position: absolute;
-  right: 0;
-  bottom: 0;
+  @include positionSet(null, 0px, 0px, null);
   padding-bottom: 15px;
 
   li{
     display: inline;
     margin-right: 45px;
-
   }
-
-}
-
-#header a{
-  text-decoration: none;
-  color: black;
-
-  &:hover{
-    color: blue;
-  }
-
 }
 
 #mainimg{
-  @include box-center(100%,590px);
+  @include boxSizeSet(map-get($boxSize,widthAll), map-get($boxSize,mainImg_height));
   position: relative;
 
   img{
-    @include box-center(100%,590px);
+    @include boxSizeSet(map-get($boxSize,widthAll), map-get($boxSize,mainImg_height));
     object-fit: cover;
   }
 
   .innerbox{
-    @include box-center(800px,300px);
+    @include boxSizeSet(map-get($innerbox,mainImg_width), map-get($innerbox,mainImg_height));
     font-size: 25px;
     position: absolute;
     margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 150px;
+    @include positionSet(150px, 0px, null, 0px);
 
     h1{
       font-size: 80px;
-      color: white;
+      color: nth($colors,1);
       font-weight: bold;
     }
 
     p{
-      top: 100px;
-      color: white;
+      @include positionSet(100px, null, null, null);
+      color: nth($colors,1);
       line-height: 1.3;
     }
-
   }
-
 }
 
 #section{
-  @include box-center(1180px,450px);
+  @include boxSizeSet(map-get($boxSize,section_width), map-get($boxSize,section_height));
   margin: 0 auto;
   overflow: hidden;
 
@@ -118,13 +144,12 @@ body{
   }
 
   .article{
-    width: 295px;
+    @include boxSizeSet(295px,null);
     float: left;
     text-align: center;
 
     img{
-      width: 230px;
-      height: 163px;
+      @include boxSizeSet(230px,163px);
     }
 
     h3{
@@ -142,26 +167,23 @@ body{
 }
 
 #footer{
-  width: 100%;
+  @include boxSizeSet(map-get($boxSize,widthAll), null);
 
   .innerbox{
-    @include box-center(1180px,100px);
-
+    @include boxSizeSet(map-get($innerbox,footer_width), map-get($innerbox,footer_height));
     margin: 0 auto;
     position: relative;
 
     h1{
+      @include positionSet(null, null, 15px, 10px);
       position: absolute;
-      left: 10px;
-      bottom: 15px;
       font-weight: bold;
       font-size: 32px;
     }
 
     ul{
+      @include positionSet(null, 20px, 15px, null);
       position: absolute;
-      right: 20px;
-      bottom: 15px;
 
       li{
         display: inline;
@@ -169,10 +191,10 @@ body{
 
         a{
           text-decoration: none;
-          color: black;
+          color: nth($colors,3);
 
           &:hover{
-            color: blue;
+            color: nth($colors,2);
           }
         }
       }
@@ -180,7 +202,7 @@ body{
   }
 
   #footer_info{
-    width: 1000px;
+    @include boxSizeSet(1000px,null);
     padding: 10px 0 15px 15px;
     margin: 0 auto;
     line-height: 1.3;
