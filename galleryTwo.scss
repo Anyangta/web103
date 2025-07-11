@@ -1,0 +1,108 @@
+$font-style: "Verdana", "Geneva", sans-serif;
+$colors: white, blue, black, gold;
+
+$boxSize: (
+    widthAll : 100%,
+    section_width : 1000px
+);
+
+$innerbox:(
+    header_width : 1180px,
+    header_height : 120px
+);
+
+@mixin positionSet($top, $right, $bottom, $left){
+  @if $top != null{
+    top: $top;
+  }
+  
+  @if $right != null{
+    right: $right;
+  }
+
+  @if $bottom != null{
+    bottom: $bottom;
+  }
+
+  @if $left != null{
+    left: $left;
+  }
+}
+
+
+@mixin boxSizeSet($width, $height){
+  @if $width != null{
+    width: $width;
+  }
+
+  @if $height != null{
+    height: $height;
+  }
+
+}
+body{
+  font-family: $font-style;
+  padding-top: 120px;
+}
+
+#header{  
+  @include boxSizeSet(map-get($boxSize,widthAll),null);
+  background-color: nth($colors,1);
+  border-bottom: 1px solid black;
+  position: fixed;
+  @include positionSet(0px,null ,null , null);
+  z-index: 2;
+
+  .innerbox{
+    @include boxSizeSet(map-get($innerbox,header_width), map-get($innerbox,header_height));
+    margin: 0 auto;
+    position: relative;
+
+    h1{
+      position: absolute;
+      @include positionSet(null, null, 15px, 10px);
+      font-size: 32px;
+      font-weight: bold;
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: nth($colors,3);
+
+    &:hover{
+        color: nth($colors,2);
+    }
+  }
+}
+
+#utilitybar{
+  position: absolute;
+  @include positionSet(20px, 30px, null, null);
+
+  li{
+    display: inline;
+    margin-right: 15px;
+    opacity: 0.3;
+  }
+}
+
+#globalbar{
+  position: absolute;
+  @include positionSet(null, 0px, 0px, null);
+  padding-bottom: 15px;
+
+  li{
+    display: inline;
+    margin-right: 45px;
+  }
+}
+
+#section{
+  @include boxSizeSet(map-get($boxSize, section_width), null);
+  //width: 1000px;
+  margin: 0 auto;
+
+  
+}
+
