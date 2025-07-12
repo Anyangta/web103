@@ -1,4 +1,5 @@
 $font-style: "Verdana", "Geneva", sans-serif;
+$colors: white, blue, black, gold;
 
 $boxSize: (
     widthAll : 100%,
@@ -15,8 +16,6 @@ $innerbox:(
     footer_width : 1000px,
     footer_height : 100px
 );
-
-$colors: white, blue, black, gold;
 
 @mixin positionSet($top, $right, $bottom, $left){
   @if $top != null{

@@ -1,177 +1,205 @@
+$font-style: "Verdana", "Geneva", sans-serif;
+$colors: white, blue, black, gold;
 
-@function box-center($width, $height){
-  @return(
-    width: $width,
-    height: $height
-  );
+$boxSize: (
+    widthAll : 100%,
+    section_width : 1000px
+);
+
+$innerbox:(
+    header_width : 1180px,
+    header_height : 120px
+);
+
+@mixin positionSet($top, $right, $bottom, $left){
+  @if $top != null{
+    top: $top;
+  }
+  
+  @if $right != null{
+    right: $right;
+  }
+
+  @if $bottom != null{
+    bottom: $bottom;
+  }
+
+  @if $left != null{
+    left: $left;
+  }
 }
 
+
+@mixin boxSizeSet($width, $height){
+  @if $width != null{
+    width: $width;
+  }
+
+  @if $height != null{
+    height: $height;
+  }
+
+}
 body{
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: $font-style;
   padding-top: 120px;
 }
 
-#header{
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  background-color: white;
+#header{  
+  @include boxSizeSet(map-get($boxSize,widthAll),null);
+  background-color: nth($colors,1);
   border-bottom: 1px solid black;
+  position: fixed;
+  @include positionSet(0px,null ,null , null);
+  z-index: 2;
 
   .innerbox{
-    @include box-center(1180px,120px);
+    @include boxSizeSet(map-get($innerbox,header_width), map-get($innerbox,header_height));
     margin: 0 auto;
     position: relative;
 
     h1{
       position: absolute;
-      left: 10px;
-      bottom: 15px;
+      @include positionSet(null, null, 15px, 10px);
       font-size: 32px;
       font-weight: bold;
-    }
-
-    #utilitybar{
-      position: absolute;
-      top: 20px;
-      right: 30px;
-
-      li{
-        display: inline;
-        margin-right: 15px;
-        opacity: 0.3;
-      }
-    }
-
-    #globalbar{
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      padding-bottom: 15px;
-
-      li{
-        display: inline;
-        margin-right: 45px;
-      }
     }
   }
 
   a{
     text-decoration: none;
-    color: black;
+    color: nth($colors,3);
 
     &:hover{
-      color: blue;
+        color: nth($colors,2);
     }
   }
 }
 
-#section{
-  width: 1000px;
-  margin: 0 auto;
+#utilitybar{
+  position: absolute;
+  @include positionSet(20px, 30px, null, null);
 
-  article{
-    position: relative;
-    float: left;
-
-    img{
-      margin-top: 10px;
-      display: block;
-    }
-
-    p{
-      position: absolute;
-      color: white;
-      font-size: 30px;
-
-      &.color_gold{
-        color: gold;
-      }
-
-      &.font{
-        font-size: 50px;
-      }
-    }
-
-    .msg{
-      position: absolute;
-      top: 160px;
-      left: 90px;
-      width: 300px;
-
-      p{
-        color: black;
-        font-size: 14px;
-        font-weight: bold;
-      }
-    }
-
-    &.right{
-      float: right;
-    }
-
-    .innerbox{
-      @include box-center(450px,150px);
-      position: absolute;
-      bottom: 40px;
-      right: 30px;
-      line-height: 2;
-      color: white;
-
-      p{
-        font-size: 20px;
-
-        &::before{
-          font-size: 30px;
-          content: 'Programmer';
-        }
-
-        &::after{
-          font-size: 30px;
-          content: 'the Digital Nomad!';
-        }
-      }
-    }
+  li{
+    display: inline;
+    margin-right: 15px;
+    opacity: 0.3;
   }
 }
 
+#globalbar{
+  position: absolute;
+  @include positionSet(null, 0px, 0px, null);
+  padding-bottom: 15px;
 
-article:nth-of-type(1){
-  p{
-    right: 10px;
-    bottom: 10px;
+  li{
+    display: inline;
+    margin-right: 45px;
   }
+}
+
+@mixin articleSet($float){
+  position: relative;
+  float: left;
+
+  @if $float == 5{
+    float: right;
+  }
+}
+
+@mixin articleImg($m){
+  display: block;
+  margin-top: 10px;
+  @if $m == 1 or $m == 6{
     margin-right: 10px;
-
-}
-
-article:nth-of-type(2){
-  p{
-    left: 10px;
-    top: 50px;
   }
 }
 
-article:nth-of-type(3){
-  p{
-    right: 10px;
-    bottom: 20px;
+@mixin articleP($p){
+  position: absolute;
+  color: nth($colors,1);
+  font-size: 30px;
+
+  @if $p == 1{
+    margin-right: 10px;
   }
-}
 
-
-article:nth-of-type(7){
-  p{
-    right: 20px;
-    bottom: 30px;
+  @if $p == 6{
+    color: nth($colors,3);
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.3;
   }
-}
 
-article:nth-of-type(8){
-  p{
-    top: 165px;
-    left: 180px;
+  @if $p ==7{
+    color: nth($colors,4);
+  }
+
+  @if $p ==8{
+    font-size: 50px;
     text-shadow: 1px 1px black;
   }
+
+  @if $p ==9{
+    font-size: 20px;
+    &::before{
+      font-size: 30px;
+      content: 'Programmer';
+    }
+
+    &::after{
+      font-size: 30px;
+      content: 'the Digital Nomad!';
+    }
+  }
+  
 }
+
+$articlePData:(
+  (null,10px,10px,null),
+  (50px,null,null,10px),
+  (null,10px,20px,null)
+);
+
+#section{
+  @include boxSizeSet(map-get($boxSize, section_width), null);
+  margin: 0 auto;
+
+  @for $i from 1 through 9{
+    article:nth-of-type(#{$i}){
+      @include articleSet($i);
+      img{
+        @include articleImg($i);
+      }
+      p{
+        @include articleP(($i));
+        @if $i <= 3{
+          $data: nth($articlePData, $i);
+          $top: nth($data, 1);
+          $right: nth($data, 2);
+          $bottom: nth($data, 3);
+          $left: nth($data, 4);
+
+          @include positionSet($top, $right, $bottom, $left);
+        }
+        @else if $i== 6{
+          @include positionSet(160px,null ,null ,90px);
+        }
+        @else if $i== 7{
+          @include positionSet(null,20px ,30px ,null);
+        }
+        @else if $i == 8{
+          @include positionSet(165px,null ,null ,160px);
+        }
+
+      }
+      .innerbox{
+        @include boxSizeSet(450px,150px);
+        position: absolute;
+        line-height: 2;
+        @include positionSet(null,30px ,40px ,null );
+      }  
+    }
+  }
+}
+
