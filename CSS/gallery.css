@@ -1,281 +1,191 @@
 body {
   font-family: "Verdana", "Geneva", sans-serif;
-  padding-top: 120px;
 }
 
-#header {
-  width: 100%;
-  background-color: white;
-  border-bottom: 1px solid black;
-  position: fixed;
-  top: 0px;
-  z-index: 2;
+header .headerinnerbox ul:nth-of-type(2) li, header .headerinnerbox ul:nth-of-type(1) li {
+  display: inline;
 }
-#header .innerbox {
-  width: 1180px;
-  height: 120px;
-  margin: 0 auto;
-  position: relative;
-}
-#header .innerbox h1 {
-  position: absolute;
-  bottom: 15px;
-  left: 10px;
-  font-size: 32px;
-  font-weight: bold;
-}
-#header a {
+header .headerinnerbox ul:nth-of-type(2) li a, header .headerinnerbox ul:nth-of-type(1) li a {
   text-decoration: none;
   color: black;
 }
-#header a:hover {
+header .headerinnerbox ul:nth-of-type(2) li a:hover, header .headerinnerbox ul:nth-of-type(1) li a:hover {
   color: blue;
 }
 
-#utilitybar {
+article:nth-of-type(1) p {
   position: absolute;
-  top: 20px;
-  right: 30px;
-}
-#utilitybar li {
-  display: inline;
-  margin-right: 15px;
-  opacity: 0.3;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  right: 10px;
+  bottom: 20px;
 }
 
-#globalbar {
+article:nth-of-type(2) p {
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  top: 50px;
+  left: 10px;
+}
+
+article:nth-of-type(3) p {
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  right: 10px;
+  bottom: 20px;
+}
+
+article:nth-of-type(6) p {
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  top: 160px;
+  left: 90px;
+}
+
+article:nth-of-type(7) p {
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  right: 20px;
+  bottom: 30px;
+}
+
+article:nth-of-type(8) p {
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  top: 165px;
+  left: 160px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid black;
+  z-index: 2;
+}
+header .headerinnerbox {
+  background-color: white;
+  position: relative;
+  width: 1180px;
+  height: 120px;
+  margin: 0 auto;
+}
+header .headerinnerbox h1 {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  font-weight: bold;
+  font-size: 32px;
+}
+header .headerinnerbox ul:nth-of-type(1) {
   position: absolute;
   right: 0px;
   bottom: 0px;
   padding-bottom: 15px;
 }
-#globalbar li {
-  display: inline;
+header .headerinnerbox ul:nth-of-type(1) li {
   margin-right: 45px;
 }
+header .headerinnerbox ul:nth-of-type(2) {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+header .headerinnerbox ul:nth-of-type(2) li {
+  margin-right: 15px;
+  opacity: 0.3;
+}
 
-#section {
+section {
+  padding-top: 120px;
   width: 1000px;
   margin: 0 auto;
 }
-#section article:nth-of-type(1) {
-  position: relative;
+section article:nth-of-type(1) {
   float: left;
-}
-#section article:nth-of-type(1) img {
-  display: block;
+  position: relative;
   margin-top: 10px;
   margin-right: 10px;
 }
-#section article:nth-of-type(1) p {
-  position: absolute;
-  color: white;
-  font-size: 30px;
-  margin-right: 10px;
-  right: 10px;
-  bottom: 10px;
-}
-#section article:nth-of-type(1) .innerbox {
-  width: 450px;
-  height: 150px;
-  position: absolute;
-  line-height: 2;
-  right: 30px;
-  bottom: 40px;
-}
-#section article:nth-of-type(2) {
-  position: relative;
+section article:nth-of-type(2) {
   float: left;
-}
-#section article:nth-of-type(2) img {
-  display: block;
+  position: relative;
   margin-top: 10px;
 }
-#section article:nth-of-type(2) p {
-  position: absolute;
-  color: white;
-  font-size: 30px;
-  top: 50px;
-  left: 10px;
-}
-#section article:nth-of-type(2) .innerbox {
-  width: 450px;
-  height: 150px;
-  position: absolute;
-  line-height: 2;
-  right: 30px;
-  bottom: 40px;
-}
-#section article:nth-of-type(3) {
-  position: relative;
+section article:nth-of-type(3) {
   float: left;
-}
-#section article:nth-of-type(3) img {
-  display: block;
+  position: relative;
   margin-top: 10px;
 }
-#section article:nth-of-type(3) p {
-  position: absolute;
-  color: white;
-  font-size: 30px;
-  right: 10px;
-  bottom: 20px;
-}
-#section article:nth-of-type(3) .innerbox {
-  width: 450px;
-  height: 150px;
-  position: absolute;
-  line-height: 2;
-  right: 30px;
-  bottom: 40px;
-}
-#section article:nth-of-type(4) {
-  position: relative;
+section article:nth-of-type(4) {
   float: left;
-}
-#section article:nth-of-type(4) img {
-  display: block;
+  position: relative;
   margin-top: 10px;
 }
-#section article:nth-of-type(4) p {
-  position: absolute;
-  color: white;
-  font-size: 30px;
-}
-#section article:nth-of-type(4) .innerbox {
-  width: 450px;
-  height: 150px;
-  position: absolute;
-  line-height: 2;
-  right: 30px;
-  bottom: 40px;
-}
-#section article:nth-of-type(5) {
-  position: relative;
+section article:nth-of-type(5) {
   float: left;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
   float: right;
 }
-#section article:nth-of-type(5) img {
-  display: block;
-  margin-top: 10px;
-}
-#section article:nth-of-type(5) p {
-  position: absolute;
-  color: white;
-  font-size: 30px;
-}
-#section article:nth-of-type(5) .innerbox {
-  width: 450px;
-  height: 150px;
-  position: absolute;
-  line-height: 2;
-  right: 30px;
-  bottom: 40px;
-}
-#section article:nth-of-type(6) {
-  position: relative;
+section article:nth-of-type(6) {
   float: left;
-}
-#section article:nth-of-type(6) img {
-  display: block;
+  position: relative;
   margin-top: 10px;
-  margin-right: 10px;
 }
-#section article:nth-of-type(6) p {
-  position: absolute;
-  color: white;
-  font-size: 30px;
+section article:nth-of-type(6) p {
   color: black;
   font-size: 16px;
-  font-weight: bold;
   line-height: 1.3;
-  top: 160px;
-  left: 90px;
 }
-#section article:nth-of-type(6) .innerbox {
-  width: 450px;
-  height: 150px;
-  position: absolute;
-  line-height: 2;
-  right: 30px;
-  bottom: 40px;
-}
-#section article:nth-of-type(7) {
-  position: relative;
+section article:nth-of-type(7) {
   float: left;
-}
-#section article:nth-of-type(7) img {
-  display: block;
+  position: relative;
   margin-top: 10px;
 }
-#section article:nth-of-type(7) p {
-  position: absolute;
-  color: white;
-  font-size: 30px;
+section article:nth-of-type(7) p {
   color: gold;
-  right: 20px;
-  bottom: 30px;
 }
-#section article:nth-of-type(7) .innerbox {
-  width: 450px;
-  height: 150px;
-  position: absolute;
-  line-height: 2;
-  right: 30px;
-  bottom: 40px;
-}
-#section article:nth-of-type(8) {
-  position: relative;
+section article:nth-of-type(8) {
   float: left;
-}
-#section article:nth-of-type(8) img {
-  display: block;
+  position: relative;
   margin-top: 10px;
 }
-#section article:nth-of-type(8) p {
-  position: absolute;
-  color: white;
-  font-size: 30px;
+section article:nth-of-type(8) p {
   font-size: 50px;
   text-shadow: 1px 1px black;
-  top: 165px;
-  left: 160px;
 }
-#section article:nth-of-type(8) .innerbox {
+section article:nth-of-type(9) {
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section .innerbox {
   width: 450px;
   height: 150px;
   position: absolute;
-  line-height: 2;
   right: 30px;
   bottom: 40px;
-}
-#section article:nth-of-type(9) {
-  position: relative;
-  float: left;
-}
-#section article:nth-of-type(9) img {
-  display: block;
-  margin-top: 10px;
-}
-#section article:nth-of-type(9) p {
-  position: absolute;
-  color: white;
-  font-size: 30px;
   font-size: 20px;
+  color: white;
+  line-height: 2;
 }
-#section article:nth-of-type(9) p::before {
+section .innerbox p::before {
   font-size: 30px;
   content: "Programmer";
 }
-#section article:nth-of-type(9) p::after {
+section .innerbox p::after {
   font-size: 30px;
   content: "the Digital Nomad!";
-}
-#section article:nth-of-type(9) .innerbox {
-  width: 450px;
-  height: 150px;
-  position: absolute;
-  line-height: 2;
-  right: 30px;
-  bottom: 40px;
 }/*# sourceMappingURL=gallery.css.map */

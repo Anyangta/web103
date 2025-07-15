@@ -1,210 +1,153 @@
+@use 'setting' as st;
+
 $font-style: "Verdana", "Geneva", sans-serif;
-$colors: white, blue, black, gold;
+$innerBoxSize:(
+    "headerclass":(
+        "name" : headerinnerbox,
+        "positionType" : relative,
+        "width" : 1180px,
+        "height" : 120px
+    ),
 
-$boxSize: (
-    widthAll : 100%,
-    mainImg_height : 590px,
-    section_width : 1180px,
-    section_height : 450px
+    "mainclass":(
+        "name" : maininnerbox,
+        "positionType" : relative,
+        "width" : 800px,
+        "height" : 300px
+    ),
+
+    "footerclass":(
+        "name" : footerinnerbox,
+        "positionType" : relative,
+        "width" : 1000px,
+        "height" : 100px
+    )
 );
 
-$innerbox:(
-    header_width : 1180px,
-    header_height : 120px,
-    mainImg_width : 800px,
-    mainImg_height : 300px,
-    footer_width : 1000px,
-    footer_height : 100px
-);
-
-@mixin positionSet($top, $right, $bottom, $left){
-  @if $top != null{
-    top: $top;
-  }
-  
-  @if $right != null{
-    right: $right;
-  }
-
-  @if $bottom != null{
-    bottom: $bottom;
-  }
-
-  @if $left != null{
-    left: $left;
-  }
-}
-
-
-@mixin boxSizeSet($width, $height){
-  @if $width != null{
-    width: $width;
-  }
-
-  @if $height != null{
-    height: $height;
-  }
-
-}
 body{
-  font-family: $font-style;
+    font-family: $font-style;
 }
 
-#header{  
-  @include boxSizeSet(map-get($boxSize,widthAll),null);
-  background-color: nth($colors,1);
-  border-bottom: 1px solid black;
-
-  .innerbox{
-    @include boxSizeSet(map-get($innerbox,header_width), map-get($innerbox,header_height));
-    margin: 0 auto;
-    position: relative;
-
-    h1{
-      position: absolute;
-      @include positionSet(null, null, 15px, 10px);
-      font-size: 32px;
-      font-weight: bold;
-    }
-  }
-
-  a{
-    text-decoration: none;
-    color: nth($colors,3);
-
-    &:hover{
-        color: nth($colors,2);
-    }
-  }
-}
-
-#utilitybar{
-  position: absolute;
-  @include positionSet(20px, 30px, null, null);
-
-  li{
+%li_base{
     display: inline;
-    margin-right: 15px;
-    opacity: 0.3;
-  }
-}
-
-#globalbar{
-  position: absolute;
-  @include positionSet(null, 0px, 0px, null);
-  padding-bottom: 15px;
-
-  li{
-    display: inline;
-    margin-right: 45px;
-  }
-}
-
-#mainimg{
-  @include boxSizeSet(map-get($boxSize,widthAll), map-get($boxSize,mainImg_height));
-  position: relative;
-
-  img{
-    @include boxSizeSet(map-get($boxSize,widthAll), map-get($boxSize,mainImg_height));
-    object-fit: cover;
-  }
-
-  .innerbox{
-    @include boxSizeSet(map-get($innerbox,mainImg_width), map-get($innerbox,mainImg_height));
-    font-size: 25px;
-    position: absolute;
-    margin: 0 auto;
-    @include positionSet(150px, 0px, null, 0px);
-
-    h1{
-      font-size: 80px;
-      color: nth($colors,1);
-      font-weight: bold;
-    }
-
-    p{
-      @include positionSet(100px, null, null, null);
-      color: nth($colors,1);
-      line-height: 1.3;
-    }
-  }
-}
-
-#section{
-  @include boxSizeSet(map-get($boxSize,section_width), map-get($boxSize,section_height));
-  margin: 0 auto;
-  overflow: hidden;
-
-  h2{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .article{
-    @include boxSizeSet(295px,null);
-    float: left;
-    text-align: center;
-
-    img{
-      @include boxSizeSet(230px,163px);
-    }
-
-    h3{
-      font-weight: bold;
-      text-align: left;
-      margin: 10px 32px 0 32px;
-    }
-
-    p{
-      margin: 10px 32px 0 32px;
-      text-align: left;
-      line-height: 1.3;
-    }
-  }
-}
-
-#footer{
-  @include boxSizeSet(map-get($boxSize,widthAll), null);
-
-  .innerbox{
-    @include boxSizeSet(map-get($innerbox,footer_width), map-get($innerbox,footer_height));
-    margin: 0 auto;
-    position: relative;
-
-    h1{
-      @include positionSet(null, null, 15px, 10px);
-      position: absolute;
-      font-weight: bold;
-      font-size: 32px;
-    }
-
-    ul{
-      @include positionSet(null, 20px, 15px, null);
-      position: absolute;
-
-      li{
-        display: inline;
-        margin-right: 12px;
-
-        a{
-          text-decoration: none;
-          color: nth($colors,3);
-
-          &:hover{
-            color: nth($colors,2);
-          }
+    a{
+        text-decoration: none;
+        @include st.colorSet(1,3,null);
+        &:hover{
+            @include st.colorSet(1,2,null);
         }
-      }
     }
-  }
+}
 
-  #footer_info{
-    @include boxSizeSet(1000px,null);
-    padding: 10px 0 15px 15px;
+@each $key, $map in $innerBoxSize{
+    $name: map-get($map, "name");
+    $positionType: map-get($map, "positionType");
+    $width: map-get($map, "width");
+    $height: map-get($map, "height");
+
+    .#{$name}{
+        @include st.boxSizeSet(1,$width,$height);
+        margin: 0 auto;
+    }
+}
+
+header{
+    @include st.boxSizeSet(null, 100%, null);
+    border-bottom: 1px solid black;
+
+    .headerinnerbox{
+        @include st.colorSet(2,1,null);
+        h1{
+            @include st.positionSet(2,null,null,15px,10px);
+            font-weight: bold;
+            font-size: 32px;
+        }
+        ul:nth-of-type(1){
+            @include st.positionSet(2,null,0px,0px,null);
+            padding-bottom: 15px;
+            li{
+                @extend %li_base;
+                margin-right: 45px;
+            }
+        }
+
+        ul:nth-of-type(2){
+            @include st.positionSet(2,20px,30px,null,null);
+            li{
+                @extend %li_base;
+                margin-right: 15px;
+                opacity: 0.3;
+            }
+        }
+    } 
+}
+
+.mainImg{
+    @include st.boxSizeSet(1,100%,590px);
+    img{
+        @include st.boxSizeSet(1,100%,590px);
+        object-fit: cover;
+    }
+    .maininnerbox{
+        font-size: 25px;
+        h1{font-size: 80px;}
+        @include st.positionSet(2,150px,0px,null,0px);
+        @include st.colorSet(1,1,null);
+        line-height: 1.3;
+    }
+}
+
+section{
+    @include st.boxSizeSet(null,1180px,450px);
     margin: 0 auto;
-    line-height: 1.3;
-    font-size: 12px;
-  }
+    overflow: hidden;
+
+    h2{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    article{
+        @include st.boxSizeSet(null,230px,null);
+        float: left;
+        padding-left: 32.5px;
+        padding-right: 32.5px;
+
+        img{
+            @include st.boxSizeSet(null,230px,163px);
+        }
+
+        h3{
+            margin: 10px 0 10px 0;
+            font-weight: bold;            
+        }
+
+        p{
+            line-height: 1.3;
+        }
+    } 
+}
+
+footer{
+    .footerinnerbox{
+        h1{
+            @include st.positionSet(2,null, null, 15px, 10px);
+            font-weight: bold;
+            font-size: 32px;
+        }
+        ul{
+            @include st.positionSet(2,null, 20px, 15px, null);
+            li{@extend %li_base}
+        }
+    } 
+
+    #footer_info{
+        @include st.boxSizeSet(null,1000px,null);
+        padding: 10px 0 15px 15px;
+        margin: 0 auto;
+        line-height: 1.3;
+        font-size: 12px;
+    }
 }

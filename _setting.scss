@@ -1,0 +1,50 @@
+$colors: white, blue, black, gold;
+$positionTypes: relative, absolute, fixed;
+
+@mixin positionSet($positionBool, $top, $right, $bottom, $left){
+    @if type-of($positionBool) == 'number'{
+        position: nth($positionTypes, $positionBool);
+    }
+
+    @if $top != null{
+        top: $top;
+    }
+
+    @if $right != null{
+        right: $right;
+    }
+
+    @if $bottom != null{
+        bottom: $bottom;
+    }
+
+    @if $left != null{
+        left: $left;
+    }
+}
+
+@mixin boxSizeSet($positionBool,$width,$height){
+    @if type-of($positionBool) == 'number'{
+        position: nth($positionTypes, $positionBool);
+    }
+
+    @if $width != null{
+        width: $width;
+    }
+
+    @if $height != null{
+        height: $height;
+    }
+}
+
+@mixin colorSet($bool,$c,$opacity){
+    @if $bool == 1{
+        color: nth($colors,$c);
+    } @else if $bool == 2{
+        background-color: nth($colors,$c);
+    }
+
+    @if $opacity != null{
+        opacity: $opacity;
+    }
+}

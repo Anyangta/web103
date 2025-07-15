@@ -1,205 +1,129 @@
+@use 'setting' as st;
+
 $font-style: "Verdana", "Geneva", sans-serif;
-$colors: white, blue, black, gold;
-
-$boxSize: (
-    widthAll : 100%,
-    section_width : 1000px
+$articlePositions:(
+  1: (right: 10px, bottom: 20px),
+  2: (top: 50px, left: 10px),
+  3: (right: 10px, bottom: 20px),
+  6: (top: 160px,left:90px),
+  7: (right: 20px, bottom: 30px),
+  8: (top:165px, left:160px),
 );
 
-$innerbox:(
-    header_width : 1180px,
-    header_height : 120px
-);
-
-@mixin positionSet($top, $right, $bottom, $left){
-  @if $top != null{
-    top: $top;
-  }
-  
-  @if $right != null{
-    right: $right;
-  }
-
-  @if $bottom != null{
-    bottom: $bottom;
-  }
-
-  @if $left != null{
-    left: $left;
-  }
-}
-
-
-@mixin boxSizeSet($width, $height){
-  @if $width != null{
-    width: $width;
-  }
-
-  @if $height != null{
-    height: $height;
-  }
-
-}
 body{
-  font-family: $font-style;
-  padding-top: 120px;
+    font-family: $font-style;
 }
 
-#header{  
-  @include boxSizeSet(map-get($boxSize,widthAll),null);
-  background-color: nth($colors,1);
-  border-bottom: 1px solid black;
-  position: fixed;
-  @include positionSet(0px,null ,null , null);
-  z-index: 2;
-
-  .innerbox{
-    @include boxSizeSet(map-get($innerbox,header_width), map-get($innerbox,header_height));
-    margin: 0 auto;
-    position: relative;
-
-    h1{
-      position: absolute;
-      @include positionSet(null, null, 15px, 10px);
-      font-size: 32px;
-      font-weight: bold;
-    }
-  }
-
-  a{
-    text-decoration: none;
-    color: nth($colors,3);
-
-    &:hover{
-        color: nth($colors,2);
-    }
-  }
-}
-
-#utilitybar{
-  position: absolute;
-  @include positionSet(20px, 30px, null, null);
-
-  li{
+%li_base{
     display: inline;
-    margin-right: 15px;
-    opacity: 0.3;
-  }
-}
-
-#globalbar{
-  position: absolute;
-  @include positionSet(null, 0px, 0px, null);
-  padding-bottom: 15px;
-
-  li{
-    display: inline;
-    margin-right: 45px;
-  }
-}
-
-@mixin articleSet($float){
-  position: relative;
-  float: left;
-
-  @if $float == 5{
-    float: right;
-  }
-}
-
-@mixin articleImg($m){
-  display: block;
-  margin-top: 10px;
-  @if $m == 1 or $m == 6{
-    margin-right: 10px;
-  }
-}
-
-@mixin articleP($p){
-  position: absolute;
-  color: nth($colors,1);
-  font-size: 30px;
-
-  @if $p == 1{
-    margin-right: 10px;
-  }
-
-  @if $p == 6{
-    color: nth($colors,3);
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.3;
-  }
-
-  @if $p ==7{
-    color: nth($colors,4);
-  }
-
-  @if $p ==8{
-    font-size: 50px;
-    text-shadow: 1px 1px black;
-  }
-
-  @if $p ==9{
-    font-size: 20px;
-    &::before{
-      font-size: 30px;
-      content: 'Programmer';
+    a{
+        text-decoration: none;
+        @include st.colorSet(1,3,null);
+        &:hover{
+            @include st.colorSet(1,2,null);
+        }
     }
-
-    &::after{
-      font-size: 30px;
-      content: 'the Digital Nomad!';
-    }
-  }
-  
 }
 
-$articlePData:(
-  (null,10px,10px,null),
-  (50px,null,null,10px),
-  (null,10px,20px,null)
-);
-
-#section{
-  @include boxSizeSet(map-get($boxSize, section_width), null);
-  margin: 0 auto;
-
-  @for $i from 1 through 9{
+@mixin articleSet($i){
     article:nth-of-type(#{$i}){
-      @include articleSet($i);
-      img{
-        @include articleImg($i);
-      }
-      p{
-        @include articleP(($i));
-        @if $i <= 3{
-          $data: nth($articlePData, $i);
-          $top: nth($data, 1);
-          $right: nth($data, 2);
-          $bottom: nth($data, 3);
-          $left: nth($data, 4);
+        float: left;
+        position: relative;
+        margin-top: 10px;
 
-          @include positionSet($top, $right, $bottom, $left);
+        @if $i == 1{
+            margin-right: 10px;
         }
-        @else if $i== 6{
-          @include positionSet(160px,null ,null ,90px);
+        @else if $i == 5{
+            margin-left: 10px;
+            float: right;
         }
-        @else if $i== 7{
-          @include positionSet(null,20px ,30px ,null);
-        }
-        @else if $i == 8{
-          @include positionSet(165px,null ,null ,160px);
-        }
-
-      }
-      .innerbox{
-        @include boxSizeSet(450px,150px);
-        position: absolute;
-        line-height: 2;
-        @include positionSet(null,30px ,40px ,null );
-      }  
     }
-  }
 }
 
+@each $key, $map in $articlePositions{
+    article:nth-of-type(#{$key}) p{
+        position: absolute;
+        font-weight: bold;
+        font-size: 30px;
+        @include st.colorSet(1,1,null);
+        @include st.positionSet(
+            null,
+            map-get($map, top),
+            map-get($map, right),
+            map-get($map, bottom),
+            map-get($map, left)
+        );
+    }
+}
+
+header{
+    @include st.boxSizeSet(3, 100%, null);
+    border-bottom: 1px solid black;
+    z-index: 2;
+
+    .headerinnerbox{
+        @include st.colorSet(2,1,null);
+        @include st.boxSizeSet(1,1180px,120px);
+        margin: 0 auto;
+        h1{
+            @include st.positionSet(2,null,null,15px,10px);
+            font-weight: bold;
+            font-size: 32px;
+        }
+        ul:nth-of-type(1){
+            @include st.positionSet(2,null,0px,0px,null);
+            padding-bottom: 15px;
+            li{
+                @extend %li_base;
+                margin-right: 45px;
+            }
+        }
+        ul:nth-of-type(2){
+            @include st.positionSet(2,20px,30px,null,null);
+            li{
+                @extend %li_base;
+                margin-right: 15px;
+                opacity: 0.3;
+            }
+        }
+    } 
+}
+
+section{
+    padding-top: 120px;
+    @include st.boxSizeSet(null,1000px,null);
+    margin: 0 auto;
+    @for $i from 1 through 9{
+        @include articleSet($i);
+        article:nth-of-type(#{$i}) p{
+            @if $i==6{
+                @include st.colorSet(1, 3, null);
+                font-size: 16px;
+                line-height: 1.3;
+            }
+            @if $i==7{
+                @include st.colorSet(1, 4, null);
+            }
+            @if $i==8{
+                font-size: 50px;
+                text-shadow: 1px 1px black;
+            }
+        }
+    }
+    .innerbox{
+        @include st.boxSizeSet(null,450px,150px);
+        @include st.positionSet(2,null,30px,40px,null);
+        font-size: 20px;
+        @include st.colorSet(1,1,null);
+        line-height: 2;
+        p::before{
+            font-size: 30px;
+            content: 'Programmer';
+        }
+        p::after{
+            font-size: 30px;
+            content: 'the Digital Nomad!';
+        }
+    }
+}
