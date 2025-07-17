@@ -43,12 +43,11 @@ body{
 
 @each $key, $map in $articlePositions{
     article:nth-of-type(#{$key}) p{
-        position: absolute;
         font-weight: bold;
         font-size: 30px;
         @include st.colorSet(1,1,null);
         @include st.positionSet(
-            null,
+            2,
             map-get($map, top),
             map-get($map, right),
             map-get($map, bottom),
