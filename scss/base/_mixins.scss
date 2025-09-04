@@ -1,0 +1,8 @@
+@mixin boxSizeSet($w, $h){
+    @if $w != null{
+        width: $w;
+    }
+    @if $h != null{
+        height: $h;
+    }
+}

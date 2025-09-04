@@ -7,3 +7,22 @@ $colors: (
     "gold" : #FFD400
 );
 
+$innerBoxSize:(
+    "header":(
+        "name" : headerInnerBox,
+        "width" : 1180px,
+        "height" : 120px
+    ),
+
+    "main":(
+        "name" : mainInnerBox,
+        "width" : 800px,
+        "height" : 300px
+    ),
+
+    "footer":(
+        "name" : footerInnerBox,
+        "width" : 1000px,
+        "height" : 100px
+    )
+);
