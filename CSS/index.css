@@ -1,24 +1,59 @@
+header {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+header .headerInnerBox {
+  width: 1180px;
+  height: 120px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+header .headerInnerBox h1 {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  font-weight: bold;
+  font-size: 32px;
+}
+header .headerInnerBox .headerGlobalBar {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding-bottom: 15px;
+}
+header .headerInnerBox .headerGlobalBar li {
+  display: inline;
+  margin-right: 45px;
+}
+header .headerInnerBox .headerGlobalBar li a {
+  text-decoration: none;
+  color: black;
+}
+header .headerInnerBox .headerGlobalBar li a:hover {
+  color: blue;
+}
+header .headerInnerBox .headerMenuBar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+header .headerInnerBox .headerMenuBar li {
+  display: inline;
+  margin-right: 15px;
+  opacity: 0.3;
+}
+header .headerInnerBox .headerMenuBar li a {
+  text-decoration: none;
+  color: black;
+}
+header .headerInnerBox .headerMenuBar li a:hover {
+  color: blue;
+}
+
 body {
   font-family: "Verdana", "Geneva", sans-serif;
 }
 
-.headerInnerBox {
-  margin: 0 auto;
+header {
   position: relative;
-  width: 1180px;
-  height: 120px;
-}
-
-.mainInnerBox {
-  margin: 0 auto;
-  position: relative;
-  width: 800px;
-  height: 300px;
-}
-
-.footerInnerBox {
-  margin: 0 auto;
-  position: relative;
-  width: 1000px;
-  height: 100px;
 }/*# sourceMappingURL=index.css.map */

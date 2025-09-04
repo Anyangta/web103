@@ -1,21 +1,9 @@
 @use '../lib/hub' as *;
-@use '../layout/indexSection' as *;
-@use '../layout/mainImg' as *;
-@use '../layout/footer' as *;
 
 body{
     font-family: $bodyFontStyle;
 }
 
-@each $key, $m in $innerBoxSize{
-    $name: map-get($m, "name");
-    $width: map-get($m, "width");
-    $height: map-get($m, "height");
-
-    .#{$name}{
-        margin: 0 auto;
-        position: relative;
-        @include boxSizeSet($width,$height);
-        
-    }
+header{
+    position: relative;
 }
