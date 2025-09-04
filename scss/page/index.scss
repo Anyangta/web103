@@ -1,10 +1,13 @@
-@use '../lib/hub';
+@use '../lib/hub' as *;
+@use '../layout/indexSection' as *;
+@use '../layout/mainImg' as *;
+@use '../layout/footer' as *;
 
 body{
     font-family: $bodyFontStyle;
 }
 
-@each $k, $m in $innerBoxSize{
+@each $key, $m in $innerBoxSize{
     $name: map-get($m, "name");
     $width: map-get($m, "width");
     $height: map-get($m, "height");
@@ -13,5 +16,6 @@ body{
         margin: 0 auto;
         position: relative;
         @include boxSizeSet($width,$height);
+        
     }
 }
