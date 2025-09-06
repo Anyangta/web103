@@ -1,0 +1,13 @@
+@use '../lib/hub' as *;
+
+body{
+    font-family: $bodyFontStyle;
+}
+
+header{
+    position: fixed;
+    z-index: 2;
+    .headerInnerBox{
+        position: relative;
+    }
+}

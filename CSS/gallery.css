@@ -1,1 +1,101 @@
-/*# sourceMappingURL=gallery.css.map */
+header {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+header .headerInnerBox {
+  width: 1180px;
+  height: 120px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+header .headerInnerBox h1 {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  font-weight: bold;
+  font-size: 32px;
+}
+header .headerInnerBox .headerGlobalBar {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding-bottom: 15px;
+}
+header .headerInnerBox .headerGlobalBar li {
+  display: inline;
+  margin-right: 45px;
+}
+header .headerInnerBox .headerGlobalBar li a {
+  text-decoration: none;
+  color: black;
+}
+header .headerInnerBox .headerGlobalBar li a:hover {
+  color: blue;
+}
+header .headerInnerBox .headerMenuBar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+header .headerInnerBox .headerMenuBar li {
+  display: inline;
+  margin-right: 15px;
+  opacity: 0.3;
+}
+header .headerInnerBox .headerMenuBar li a {
+  text-decoration: none;
+  color: black;
+}
+header .headerInnerBox .headerMenuBar li a:hover {
+  color: blue;
+}
+
+footer .footerInnerBox {
+  width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+}
+footer #footerInfo {
+  width: 1000px;
+  padding: 10px 0 15px 15px;
+  margin: 0 auto;
+}
+
+section {
+  width: 1180px;
+  height: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+section article {
+  width: 230px;
+  float: left;
+  padding-left: 32.5px;
+  padding-right: 32.5px;
+}
+
+.mainImg {
+  width: 100%;
+  height: 590px;
+}
+.mainImg .mainInnerBox {
+  width: 800px;
+  height: 300px;
+  position: absolute;
+  top: 150px;
+  right: 0px;
+  left: 0px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Verdana", "Geneva", sans-serif;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+}
+header .headerInnerBox {
+  position: relative;
+}/*# sourceMappingURL=gallery.css.map */
