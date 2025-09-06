@@ -1,5 +1,5 @@
 @use '../lib/hub' as *;
-@forward '../layout/gallerySection';
+@use '../layout/gallerySection';
 
 body{
     font-family: $bodyFontStyle;
