@@ -2,11 +2,7 @@
 @use '../base/mixins' as *;
 
 section{
-    @include boxSizeSet(1000px,null);
-    margin: 0 auto;
-    padding-top: 120px;
+    
 
-    @for $i from 1 through 9{
-        @include articleSet($i);
-    }
+   
 }
