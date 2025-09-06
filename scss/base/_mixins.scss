@@ -40,16 +40,3 @@
     }
 }
 
-@mixin articleSet($i){
-    $data: nth($images_gallery, $i);
-    article:nth-of-type(#{$i}){
-        width: nth($data,1);
-        height: nth($data,2);
-        float: left;
-        position: relative;
-        margin-top: 10px;
-        p{
-            position: absolute;
-        }
-    }
-}
