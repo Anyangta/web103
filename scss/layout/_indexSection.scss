@@ -1,0 +1,13 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+section{
+    @include boxSizeSet(1180px,450px);
+    margin: 0 auto;
+
+    article{
+        @include boxSizeSet(230px,null);
+        float: left;
+        
+    }
+}

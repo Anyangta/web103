@@ -25,3 +25,29 @@ header{
         }
     }
 }
+
+section{
+    overflow: hidden;
+    h2{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    article{
+        padding-left: 32.5px;
+        padding-right: 32.5px;
+        img{
+            @include boxSizeSet(230px,163px);
+        }
+        h3{
+            margin: 10px 0 10px 0;
+            font-weight: bold;
+        }
+        p{
+            line-height: 1.3;
+        }
+    }
+
+}

@@ -50,6 +50,16 @@ header .headerInnerBox .headerMenuBar li a:hover {
   color: blue;
 }
 
+section {
+  width: 1180px;
+  height: 450px;
+  margin: 0 auto;
+}
+section article {
+  width: 230px;
+  float: left;
+}
+
 .mainImg {
   width: 100%;
   height: 590px;
@@ -88,4 +98,29 @@ header .headerInnerBox {
 }
 .mainImg .mainInnerBox h1 {
   font-size: 80px;
+}
+
+section {
+  overflow: hidden;
+}
+section h2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+section article {
+  padding-left: 32.5px;
+  padding-right: 32.5px;
+}
+section article img {
+  width: 230px;
+  height: 163px;
+}
+section article h3 {
+  margin: 10px 0 10px 0;
+  font-weight: bold;
+}
+section article p {
+  line-height: 1.3;
 }/*# sourceMappingURL=index.css.map */
