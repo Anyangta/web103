@@ -4,10 +4,12 @@
 section{
     @include boxSizeSet(1180px,450px);
     margin: 0 auto;
+    overflow: hidden;
 
     article{
         @include boxSizeSet(230px,null);
         float: left;
-        
+        padding-left: 32.5px;
+        padding-right: 32.5px;
     }
 }
