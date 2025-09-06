@@ -50,10 +50,42 @@ header .headerInnerBox .headerMenuBar li a:hover {
   color: blue;
 }
 
+.mainImg {
+  width: 100%;
+  height: 590px;
+}
+.mainImg .mainInnerBox {
+  width: 800px;
+  height: 300px;
+  position: absolute;
+  top: 150px;
+  right: 0px;
+  left: 0px;
+  margin: 0 auto;
+}
+
 body {
   font-family: "Verdana", "Geneva", sans-serif;
 }
 
-header {
+header .headerInnerBox {
   position: relative;
+}
+
+.mainImg {
+  position: relative;
+}
+.mainImg img {
+  width: 100%;
+  height: 590px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mainImg .mainInnerBox {
+  font-size: 25px;
+  line-height: 1.3;
+  color: #ffffff;
+}
+.mainImg .mainInnerBox h1 {
+  font-size: 80px;
 }/*# sourceMappingURL=index.css.map */

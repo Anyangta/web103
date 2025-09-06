@@ -5,5 +5,23 @@ body{
 }
 
 header{
+    .headerInnerBox{
+        position: relative;
+    }
+}
+
+.mainImg{
     position: relative;
+    img{
+        @include boxSizeSet(100%,590px);
+        object-fit: cover;
+    }
+    .mainInnerBox{
+        font-size: 25px;
+        line-height: 1.3;
+        color : map-get($colors,"wh" );
+        h1{
+            font-size: 80px;
+        }
+    }
 }
