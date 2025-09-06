@@ -11,3 +11,9 @@ header{
         position: relative;
     }
 }
+
+section{
+    article:nth-of-type(1){
+        background-color: yellow;
+    }
+}

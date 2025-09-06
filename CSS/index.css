@@ -62,6 +62,102 @@ footer #footerInfo {
 }
 
 section {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+section article:nth-of-type(1) {
+  width: 700px;
+  height: 400px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(1) p {
+  position: absolute;
+}
+section article:nth-of-type(2) {
+  width: 290px;
+  height: 190px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(2) p {
+  position: absolute;
+}
+section article:nth-of-type(3) {
+  width: 290px;
+  height: 95px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(3) p {
+  position: absolute;
+}
+section article:nth-of-type(4) {
+  width: 290px;
+  height: 95px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(4) p {
+  position: absolute;
+}
+section article:nth-of-type(5) {
+  width: 500px;
+  height: 490px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(5) p {
+  position: absolute;
+}
+section article:nth-of-type(6) {
+  width: 490px;
+  height: 240px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(6) p {
+  position: absolute;
+}
+section article:nth-of-type(7) {
+  width: 490px;
+  height: 240px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(7) p {
+  position: absolute;
+}
+section article:nth-of-type(8) {
+  width: 1000px;
+  height: 371px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(8) p {
+  position: absolute;
+}
+section article:nth-of-type(9) {
+  width: 1000px;
+  height: 361px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(9) p {
+  position: absolute;
+}
+
+section {
   width: 1180px;
   height: 450px;
   margin: 0 auto;

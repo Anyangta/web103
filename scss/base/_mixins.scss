@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @mixin boxSizeSet($w, $h){
     @if $w != null{
         width: $w;
@@ -34,6 +36,20 @@
         color: black;
         &:hover{
             color: blue;
+        }
+    }
+}
+
+@mixin articleSet($i){
+    $data: nth($images_gallery, $i);
+    article:nth-of-type(#{$i}){
+        width: nth($data,1);
+        height: nth($data,2);
+        float: left;
+        position: relative;
+        margin-top: 10px;
+        p{
+            position: absolute;
         }
     }
 }
