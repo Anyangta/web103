@@ -50,42 +50,186 @@ header .headerInnerBox .headerMenuBar li a:hover {
   color: blue;
 }
 
-footer .footerInnerBox {
-  width: 1000px;
-  height: 100px;
-  margin: 0 auto;
-}
-footer #footerInfo {
-  width: 1000px;
-  padding: 10px 0 15px 15px;
-  margin: 0 auto;
-}
-
 section {
-  width: 1180px;
-  height: 450px;
+  width: 1000px;
+  padding-top: 120px;
   margin: 0 auto;
-  overflow: hidden;
 }
-section article {
-  width: 230px;
+section article:nth-of-type(1) {
+  width: 700px;
+  height: 400px;
   float: left;
-  padding-left: 32.5px;
-  padding-right: 32.5px;
+  position: relative;
+  margin-top: 10px;
+  margin-right: 10px;
 }
-
-.mainImg {
-  width: 100%;
-  height: 590px;
+section article:nth-of-type(2) {
+  width: 290px;
+  height: 190px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
 }
-.mainImg .mainInnerBox {
-  width: 800px;
-  height: 300px;
+section article:nth-of-type(3) {
+  width: 290px;
+  height: 95px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(4) {
+  width: 290px;
+  height: 95px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(5) {
+  width: 500px;
+  height: 490px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  float: right;
+}
+section article:nth-of-type(6) {
+  width: 490px;
+  height: 240px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(7) {
+  width: 490px;
+  height: 240px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(8) {
+  width: 1000px;
+  height: 371px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(9) {
+  width: 1000px;
+  height: 361px;
+  float: left;
+  position: relative;
+  margin-top: 10px;
+}
+section article:nth-of-type(1) p {
   position: absolute;
-  top: 150px;
-  right: 0px;
-  left: 0px;
-  margin: 0 auto;
+  right: 10px;
+  bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px;
+}
+section .innerbox {
+  width: 450px;
+  height: 150px;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+}
+section article:nth-of-type(2) p {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px;
+}
+section .innerbox {
+  width: 450px;
+  height: 150px;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+}
+section article:nth-of-type(3) p {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px;
+}
+section .innerbox {
+  width: 450px;
+  height: 150px;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+}
+section .innerbox {
+  width: 450px;
+  height: 150px;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+}
+section .innerbox {
+  width: 450px;
+  height: 150px;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+}
+section article:nth-of-type(6) p {
+  position: absolute;
+  top: 160px;
+  left: 90px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px;
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.3;
+}
+section .innerbox {
+  width: 450px;
+  height: 150px;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+}
+section article:nth-of-type(7) p {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px;
+  color: #FFD400;
+}
+section .innerbox {
+  width: 450px;
+  height: 150px;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+}
+section article:nth-of-type(8) p {
+  position: absolute;
+  top: 165px;
+  left: 160px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px;
+  font-size: 50px;
+  text-shadow: 1px 1px black;
+}
+section .innerbox {
+  width: 450px;
+  height: 150px;
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
 }
 
 body {
@@ -98,4 +242,18 @@ header {
 }
 header .headerInnerBox {
   position: relative;
+}
+
+section .innerbox {
+  font-size: 20px;
+  line-height: 2;
+  color: #ffffff;
+}
+section .innerbox p::before {
+  font-size: 30px;
+  content: "Programmer";
+}
+section .innerbox p::after {
+  font-size: 30px;
+  content: "the Digital Nomad!";
 }/*# sourceMappingURL=gallery.css.map */

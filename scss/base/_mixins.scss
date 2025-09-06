@@ -40,3 +40,22 @@
     }
 }
 
+@mixin articleSet($i){
+    $data: nth($images_gallery, $i);
+  
+    article:nth-of-type(#{$i}){
+        width: nth($data, 1);
+        height: nth($data, 2);
+        float: left;
+        position: relative;
+        margin-top: 10px;
+        @if $i == 1{
+            margin-right: 10px;
+        }
+        @if $i == 5{
+            margin-left: 10px;
+            float: right;
+        }
+    }
+}
+

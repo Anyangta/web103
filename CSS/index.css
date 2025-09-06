@@ -50,17 +50,6 @@ header .headerInnerBox .headerMenuBar li a:hover {
   color: blue;
 }
 
-footer .footerInnerBox {
-  width: 1000px;
-  height: 100px;
-  margin: 0 auto;
-}
-footer #footerInfo {
-  width: 1000px;
-  padding: 10px 0 15px 15px;
-  margin: 0 auto;
-}
-
 section {
   width: 1180px;
   height: 450px;
@@ -85,6 +74,17 @@ section article {
   top: 150px;
   right: 0px;
   left: 0px;
+  margin: 0 auto;
+}
+
+footer .footerInnerBox {
+  width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+}
+footer #footerInfo {
+  width: 1000px;
+  padding: 10px 0 15px 15px;
   margin: 0 auto;
 }
 

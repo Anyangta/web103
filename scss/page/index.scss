@@ -1,4 +1,7 @@
 @use '../lib/hub' as *;
+@forward '../layout/indexSection';
+@forward '../layout/mainImg';
+@forward '../layout/footer';
 
 body{
     font-family: $bodyFontStyle;

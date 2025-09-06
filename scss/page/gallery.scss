@@ -1,4 +1,5 @@
 @use '../lib/hub' as *;
+@forward '../layout/gallerySection';
 
 body{
     font-family: $bodyFontStyle;
@@ -13,5 +14,17 @@ header{
 }
 
 section{
-    
+    .innerbox{
+        font-size: 20px;
+        line-height: 2;
+        color : map-get($colors, "wh");
+        p::before{
+            font-size: 30px;
+            content: 'Programmer';
+        }
+        p::after{
+            font-size: 30px;
+            content : 'the Digital Nomad!';
+        }
+    }
 }
