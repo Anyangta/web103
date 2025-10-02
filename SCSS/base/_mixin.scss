@@ -1,0 +1,15 @@
+@use './var';
+
+@mixin boxSizeSet($pos : null, $w : null, $h : null){
+    @if $pos != null{
+        position: $pos;
+    }
+
+    @if $w != null{
+        width: $w;
+    }
+
+    @if $h != null{
+        height: $h;
+    }
+}

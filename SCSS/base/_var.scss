@@ -1,44 +1,78 @@
 $font-style: "Verdana", "Geneva", sans-serif;
-
+$indexElement : sizeElement, positioningProperties,  fontElement, borderElement, backgroundElement;
 
 $headerClass : (
     "header" :(
         "name" : header,
-        "width" : 100%,
-        "border-bottom" : 1px solid black
+
+        "sizeElement":(
+            "width" : 100%
+        ),
+        
+        "borderElement" :(
+            "border-bottom" : 1px solid black
+        )
     ),
 
     "headerInnerBox" :(
         "name" : headerInnerBox,
-        "position" : relative,
-        "width" : 1180px,
-        "height" : 120px,
-        "background-color" : white
+
+        "sizeElement":(
+            "position" : relative,
+            "width" : 1180px,
+            "height" : 120px
+        ),
+
+        "backgroundElement" :(
+            "background-color" : white
+        )
     ),
 
     "h1" :(
         "name" : h1,
-        "position" : absolute,
-        "left" : 10px,
-        "bottom" : 15px,
-        "font-size" : 32px,
-        "font-weight" : bold
+
+        "sizeElement":(
+            "position" : absolute
+        ),
+
+        "positioningProperties" : (
+            "left" : 10px,
+            "bottom" : 15px
+        ),
+
+        "fontElement" : (
+            "font-size" : 32px,
+            "font-weight" : bold
+        )
     ),
 
     "globalBar":(
         "name" : globalBar,
-        "position" : absolute,
-        "right" : 0px,
-        "bottom": 0px,
-        "padding-bottom" : 15px
+
+        "sizeElement":(
+            "position" : absolute
+        ),
+
+        "positioningProperties" : (
+            "right" : 0px,
+            "bottom": 0px
+        ),
+        
+        "paddingElement" : (
+            "padding-bottom" : 15px
+        )
     ),
 
     "MenuBar":(
         "name" : MenuBar,
-        "position" : absolute,
-        "top" : 20px,
-        "right" : 30px
-    )
 
-    
+        "sizeElement":(
+            "position" : absolute
+        ),
+
+        "positioningProperties" : (
+            "top" : 20px,
+            "right" : 30px
+        ),
+    )
 );
