@@ -1,4 +1,8 @@
-@use './var';
+@use './var' as *;
+
+@mixin ContainSet($n){
+    
+}
 
 @mixin boxSizeSet($pos : null, $w : null, $h : null){
     @if $pos != null{
@@ -13,3 +17,22 @@
         height: $h;
     }
 }
+
+@mixin positionPropertySet($t : null , $r : null, $b : null, $l : null){
+    @if $t != null{
+        top : $t
+    }
+
+    @if $r != null{
+        right : $r
+    }
+
+    @if $b != null{
+        bottom : $b
+    }
+    
+    @if $l != null{
+        left : $l
+    }
+}
+
