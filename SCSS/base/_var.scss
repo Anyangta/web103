@@ -1,0 +1,43 @@
+$font-style : "Verdana", "Geneva" , sans-serif;
+
+$headerClass : (
+    "header" :(
+        "name" : header,
+        "width" : 100%,
+        "border-bottom" : 1px solid black
+    ),
+
+    "headerInnerBox" :(
+        "name" : headerInnerBox,
+        "position" : relative,
+        "width" : 1180px,
+        "height" : 120px,
+        "background-color" : white
+    ),
+
+    "h1" :(
+        "name" : h1,
+        "position" : absolute,
+        "left" : 10px,
+        "bottom" : 15px,
+        "font-size" : 32px,
+        "font-weight" : bold
+    ),
+
+    "globalBar":(
+        "name" : globalBar,
+        "position" : absolute,
+        "right" : 0px,
+        "bottom": 0px,
+        "padding-bottom" : 15px
+    ),
+
+    "MenuBar":(
+        "name" : MenuBar,
+        "position" : absolute,
+        "top" : 20px,
+        "right" : 30px
+    )
+
+    
+);
