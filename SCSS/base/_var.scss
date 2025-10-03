@@ -1,79 +1,73 @@
 $font-style: "Verdana", "Geneva", sans-serif;
 $indexElement : sizeElement, positioningProperties,  fontElement, borderElement, backgroundElement;
-$headerClassIndex : header, headerInnerBox, h1, globalBar , MenuBar;
 
 $headerClass : (
-    "header" :(
-        "name" : header,
+    "name" : header,
 
-        "sizeElement":(
-            "width" : 100%
-        ),
+    "sizeElement":(
+        "width" : 100%
+    ),
         
-        "borderElement" :(
-            "border-bottom" : 1px solid black
-        )
+    "borderElement" :(
+        "border-bottom" : 1px solid black
     ),
 
-    "headerInnerBox" :(
-        "name" : headerInnerBox,
+    "children": (
+        "headerInnerBox": (
+            "name": headerInnerBox,
 
-        "sizeElement":(
-            "position" : relative,
-            "width" : 1180px,
-            "height" : 120px
+            "sizeElement": (
+                "position": relative,
+                "width": 1180px,
+                "height": 120px
+            ),
+
+            "backgroundElement": (
+                "background-color": red
         ),
 
-        "backgroundElement" :(
-            "background-color" : white
+            "children": (
+                "header_h1": (
+                    "name": header_h1,
+                    "sizeElement": ( 
+                        "position": absolute 
+                    ),
+                    "positioningProperties": ( 
+                        "left": 10px, 
+                        "bottom": 15px 
+                    ),
+                    "fontElement": ( 
+                        "font-size": 32px, 
+                        "font-weight": bold 
+                    )
+                ),
+
+                "globalBar": (
+                    "name": globalBar,
+                    "sizeElement": ( 
+                        "position": absolute 
+                    ),
+                    "positioningProperties": ( 
+                        "right": 0px, 
+                        "bottom": 0px 
+                    ),
+                    "paddingElement": ( 
+                        "padding-bottom": 15px 
+                    )
+                ),
+
+                "MenuBar": (
+                    "name": MenuBar,
+                    "sizeElement": ( 
+                        "position": absolute 
+                    ),
+                    "positioningProperties": ( 
+                        "top": 20px, 
+                        "right": 30px 
+                    )
+                )
+
+            )
         )
-    ),
-
-    "h1" :(
-        "name" : h1,
-
-        "sizeElement":(
-            "position" : absolute
-        ),
-
-        "positioningProperties" : (
-            "left" : 10px,
-            "bottom" : 15px
-        ),
-
-        "fontElement" : (
-            "font-size" : 32px,
-            "font-weight" : bold
-        )
-    ),
-
-    "globalBar":(
-        "name" : globalBar,
-
-        "sizeElement":(
-            "position" : absolute
-        ),
-
-        "positioningProperties" : (
-            "right" : 0px,
-            "bottom": 0px
-        ),
-        
-        "paddingElement" : (
-            "padding-bottom" : 15px
-        )
-    ),
-
-    "MenuBar":(
-        "name" : MenuBar,
-
-        "sizeElement":(
-            "position" : absolute
-        ),
-
-        "positioningProperties" : (
-            "top" : 20px,
-            "right" : 30px
-        ),
     )
 );

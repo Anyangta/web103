@@ -1,8 +1,67 @@
 @use './var' as *;
+@use 'sass:map';
 
-@mixin ContainSet($n){
-    
+@mixin ApplyProperties($propertiesMap){
+    @each $elementName in $indexElement{
+        @if map.has-key($propertiesMap, $elementName){
+            $elementProps: map.get($propertiesMap, $elementName);
+            @if $elementName == "sizeElement" {
+                @include boxSizeSet(
+                    map.get($elementProps, "position"),
+                    map.get($elementProps, "width"),
+                    map.get($elementProps, "height")
+                );
+            }
+            
+            @else if $elementName == "positioningProperties"{
+                @include positionPropertySet(
+                    map.get($elementProps, "top"),
+                    map.get($elementProps, "right"),
+                    map.get($elementProps, "bottom"),
+                    map.get($elementProps, "left")
+                );
+            } 
+
+            @else if $elementName == "fontElement"{
+                @include fontPropertySet(
+                    map.get($elementProps, "font-size"),
+                    map.get($elementProps, "font-weight")
+                );
+            } 
+            
+            @else if $elementName == "borderElement"{
+                @include borderPropertySet(
+                    map.get($elementProps, "border-bottom")
+                );
+            }
+
+            @else if $elementName == "backgroundElement"{
+                @include backgroundPropertySet(
+                    map.get($elementProps, "background-color")
+                );
+            }
+        }
+    }
 }
+
+@mixin CreateNestedRules($styleMap) {
+    @include ApplyProperties($styleMap);
+
+    @if map.has-key($styleMap, "children") {
+        $childrenMap: map.get($styleMap, "children");
+
+        @each $childKey, $childStyleMap in $childrenMap {
+            $childName: map.get($childStyleMap, "name");
+
+            .#{$childName} {
+                @include CreateNestedRules($childStyleMap);
+            }
+        }
+    }
+}
+
+
+
 
 @mixin boxSizeSet($pos : null, $w : null, $h : null){
     @if $pos != null{
@@ -36,3 +95,23 @@
     }
 }
 
+@mixin fontPropertySet($size: null, $weight: null) {
+    @if $size != null {
+        font-size: $size;
+    }
+    @if $weight != null {
+        font-weight: $weight;
+    }
+}
+
+@mixin borderPropertySet($border-bottom: null) {
+    @if $border-bottom != null {
+        border-bottom: $border-bottom;
+    }
+}
+
+@mixin backgroundPropertySet($color: null) {
+    @if $color != null {
+        background-color: $color;
+    }
+}
