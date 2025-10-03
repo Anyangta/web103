@@ -40,6 +40,15 @@
                     map.get($elementProps, "background-color")
                 );
             }
+
+            @else if $elementName == "marginElement"{
+                @include marginPropertySet(
+                    map.get($elementProps, "top"),
+                    map.get($elementProps, "right"),
+                    map.get($elementProps, "bottom"),
+                    map.get($elementProps, "left")
+                );
+            }
         }
     }
 }
@@ -95,7 +104,7 @@
     }
 }
 
-@mixin fontPropertySet($size: null, $weight: null) {
+@mixin fontPropertySet($size: null, $weight: null){
     @if $size != null {
         font-size: $size;
     }
@@ -104,14 +113,34 @@
     }
 }
 
-@mixin borderPropertySet($border-bottom: null) {
+@mixin borderPropertySet($border-bottom: null){
     @if $border-bottom != null {
         border-bottom: $border-bottom;
     }
 }
 
-@mixin backgroundPropertySet($color: null) {
+@mixin backgroundPropertySet($color: null){
     @if $color != null {
         background-color: $color;
     }
 }
+
+@mixin marginPropertySet($t : null , $r : null, $b : null, $l : null){
+    @if $t != null{
+        margin-top : $t
+    }
+
+    @if $r != null{
+        margin-right : $r
+    }
+
+    @if $b != null{
+        margin-bottom : $b
+    }
+    
+    @if $l != null{
+        margin-left : $l
+    }
+}
+
+

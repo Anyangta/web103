@@ -1,5 +1,5 @@
 $font-style: "Verdana", "Geneva", sans-serif;
-$indexElement : sizeElement, positioningProperties,  fontElement, borderElement, backgroundElement;
+$indexElement : sizeElement, positioningProperties,  fontElement, borderElement, backgroundElement, marginElement;
 
 $headerClass : (
     "name" : header,
@@ -24,7 +24,14 @@ $headerClass : (
 
             "backgroundElement": (
                 "background-color": red
-        ),
+            ),
+
+            "marginElement" : (
+                "top" : 0px,
+                "right" :auto,
+                "bottom" : 0px,
+                "left" : auto
+            ),
 
             "children": (
                 "header_h1": (
