@@ -10,4 +10,6 @@ body{
     @include CreateNestedRules($headerClass);
 }
 
-
+#{map.get($mainImgClass, "name")}{
+    @include CreateNestedRules($mainImgClass);
+}

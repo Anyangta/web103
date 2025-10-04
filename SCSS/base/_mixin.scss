@@ -74,9 +74,14 @@
 
             @else if $elementName == "a_hyperStyle"{
                 @include a_hyperStyle(
-                    map.get($elementProps, "text_decoration"),
-                    map.get($elementProps, "color"),
-                    map.get($elementProps, "hover_color")
+                    map.get($elementProps, "text-decoration"),
+                    map.get($elementProps, "hover-color")
+                )
+            }
+
+            @else if $elementName == "imgElement"{
+                @include imgPropertSet(
+                    map.get($elementProps, "object-fit")
                 )
             }
         }
@@ -97,7 +102,7 @@
             }
         }
     }
-    @else if map.has-key($styleMap, "selectors"){
+    @if map.has-key($styleMap, "selectors"){
         $selectorsMap : map.get($styleMap, "selectors");
         @each $selectorsKey, $selectorsStyleMap in $selectorsMap{
             $selectorsName : map.get($selectorsStyleMap, "name");
@@ -213,12 +218,18 @@
     }
 }
 
-@mixin a_hyperStyle($text_decoration : null, $hover_color : null){
-    @if $text_decoration != null{
-        text-decoration: $text_decoration; 
+@mixin a_hyperStyle($text-decoration : null, $hover-color : null){
+    @if $text-decoration != null{
+        text-decoration: $text-decoration; 
     }
 
     &:hover {
-        color: $hover_color; 
+        color: $hover-color; 
+    }
+}
+
+@mixin imgPropertSet($object-fit : null){
+    @if $object-fit != null{
+        object-fit: $object-fit;
     }
 }

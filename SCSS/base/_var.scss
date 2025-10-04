@@ -1,6 +1,6 @@
 $font-style: "Verdana", "Geneva", sans-serif;
 $indexElement : sizeElement, positioningProperties,  fontElement, borderElement, backgroundElement, marginElement , displayElement,
-colorElement, paddingElement, a_hyperStyle;
+colorElement, paddingElement, a_hyperStyle, imgElement;
 
 $headerClass : (
     "name" : header,
@@ -80,8 +80,8 @@ $headerClass : (
                             ),
 
                             "a_hyperStyle" :(
-                                "text_decoration" : none,
-                                "hover_color" : blue
+                                "text-decoration" : none,
+                                "hover-color" : blue
                             )
                         )
                     )
@@ -116,3 +116,44 @@ $headerClass : (
         )
     )
 );
+
+$mainImgClass : (
+    "name" : mainImg,
+    "sizeElement" : (
+        "position" : relative,
+        "width" : 100%,
+        "height" : 590px
+    ),
+
+    "selectors" :(
+        "img" :(
+            "name" : img,
+            "sizeElement" : (
+                "position" : relative,
+                "width" : 100%,
+                "height" : 590px
+            ),
+            "imgElement" :(
+                "object-fit" : cover
+            )
+        )
+    ),
+
+    "children" :(
+        "mainInnerBox" : (
+            "name" : mainInnerBox,
+            "sizeElement" : (
+                "width" : 800px,
+                "height" : 300px
+            ),
+            "marginElement" :(
+                "top" : 0px,
+                "right" : auto,
+                "bottom" : 0px,
+                "left" : auto
+            )
+
+
+        )
+    )
+)
