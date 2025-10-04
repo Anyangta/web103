@@ -71,6 +71,14 @@
                     map.get($elementProps, "opacity")
                 )
             }
+
+            @else if $elementName == "a_hyperStyle"{
+                @include a_hyperStyle(
+                    map.get($elementProps, "text_decoration"),
+                    map.get($elementProps, "color"),
+                    map.get($elementProps, "hover_color")
+                )
+            }
         }
     }
 }
@@ -78,14 +86,24 @@
 @mixin CreateNestedRules($styleMap) {
     @include ApplyProperties($styleMap);
 
-    @if map.has-key($styleMap, "children") {
+    @if map.has-key($styleMap, "children"){
         $childrenMap: map.get($styleMap, "children");
 
-        @each $childKey, $childStyleMap in $childrenMap {
+        @each $childKey, $childStyleMap in $childrenMap{
             $childName: map.get($childStyleMap, "name");
 
             .#{$childName} {
                 @include CreateNestedRules($childStyleMap);
+            }
+        }
+    }
+    @else if map.has-key($styleMap, "selectors"){
+        $selectorsMap : map.get($styleMap, "selectors");
+        @each $selectorsKey, $selectorsStyleMap in $selectorsMap{
+            $selectorsName : map.get($selectorsStyleMap, "name");
+
+            #{$selectorsName}{
+                @include CreateNestedRules($selectorsStyleMap);
             }
         }
     }
@@ -195,11 +213,12 @@
     }
 }
 
-@mixin a_hyperStyle($color, $hover-color){
-    text-decoration: none; 
-    color: $color;         
+@mixin a_hyperStyle($text_decoration : null, $hover_color : null){
+    @if $text_decoration != null{
+        text-decoration: $text_decoration; 
+    }
 
     &:hover {
-        color: $hover-color; 
+        color: $hover_color; 
     }
 }

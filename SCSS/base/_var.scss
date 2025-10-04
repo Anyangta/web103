@@ -1,6 +1,6 @@
 $font-style: "Verdana", "Geneva", sans-serif;
 $indexElement : sizeElement, positioningProperties,  fontElement, borderElement, backgroundElement, marginElement , displayElement,
-colorElement, paddingElement;
+colorElement, paddingElement, a_hyperStyle;
 
 $headerClass : (
     "name" : header,
@@ -24,7 +24,7 @@ $headerClass : (
             ),
 
             "backgroundElement": (
-                "background-color": red
+                "background-color": white
             ),
 
             "marginElement" : (
@@ -63,17 +63,26 @@ $headerClass : (
                         "bottom": 15px 
                     ),
 
-                    "children": (
-                        "header_globalBar_li" : (
-                            "name" : header_globalBar_li,
+                    "selectors" : (
+                        "li" : (
+                            "name" : li,
                             "marginElement" :(
                                 "right" : 45px
                             ),
                             "displayElement" : (
                                 "display" : inline
+                            )
+                        ),
+                        "a" : (
+                            "name" : a,
+                            "colorElement" :(
+                                "color" : black
                             ),
 
-
+                            "a_hyperStyle" :(
+                                "text_decoration" : none,
+                                "hover_color" : blue
+                            )
                         )
                     )
                 ),
@@ -88,9 +97,9 @@ $headerClass : (
                         "right": 30px 
                     ),
 
-                    "children": (
-                        "header_MenuBar_li" : (
-                            "name" : header_MenuBar_li,
+                    "selectors" : (
+                        "li" : (
+                            "name" : li,
                             "marginElement" :(
                                 "right" : 15px
                             ),

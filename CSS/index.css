@@ -10,7 +10,7 @@ header .headerInnerBox {
   position: relative;
   width: 1180px;
   height: 120px;
-  background-color: red;
+  background-color: white;
   margin-top: 0px;
   margin-right: auto;
   margin-bottom: 0px;
@@ -29,16 +29,23 @@ header .headerInnerBox .globalBar {
   bottom: 0px;
   padding-bottom: 15px;
 }
-header .headerInnerBox .globalBar .header_globalBar_li {
+header .headerInnerBox .globalBar li {
   margin-right: 45px;
   display: inline;
+}
+header .headerInnerBox .globalBar a {
+  color: black;
+  text-decoration: none;
+}
+header .headerInnerBox .globalBar a:hover {
+  color: blue;
 }
 header .headerInnerBox .MenuBar {
   position: absolute;
   top: 20px;
   right: 30px;
 }
-header .headerInnerBox .MenuBar .header_MenuBar_li {
+header .headerInnerBox .MenuBar li {
   margin-right: 15px;
   display: inline;
   opacity: 0.3;
