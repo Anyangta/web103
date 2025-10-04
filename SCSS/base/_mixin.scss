@@ -49,6 +49,28 @@
                     map.get($elementProps, "left")
                 );
             }
+
+            @else if $elementName == "paddingElement"{
+                @include paddingPropertySet(
+                    map.get($elementProps, "top"),
+                    map.get($elementProps, "right"),
+                    map.get($elementProps, "bottom"),
+                    map.get($elementProps, "left")
+                );
+            }
+
+            @else if $elementName == "displayElement"{
+                @include displayPropertySet(
+                    map.get($elementProps, "display")
+                )
+            }
+
+            @else if $elementName == "colorElement"{
+                @include colorPropertySet(
+                    map.get($elementProps, "color"),
+                    map.get($elementProps, "opacity")
+                )
+            }
         }
     }
 }
@@ -68,9 +90,6 @@
         }
     }
 }
-
-
-
 
 @mixin boxSizeSet($pos : null, $w : null, $h : null){
     @if $pos != null{
@@ -125,6 +144,15 @@
     }
 }
 
+@mixin colorPropertySet($color: null, $opacity: null){
+    @if $color != null {
+        color: $color;
+    }
+    @if $opacity != null {
+        opacity: $opacity;
+    }
+}
+
 @mixin marginPropertySet($t : null , $r : null, $b : null, $l : null){
     @if $t != null{
         margin-top : $t
@@ -143,4 +171,35 @@
     }
 }
 
+@mixin paddingPropertySet($t : null , $r : null, $b : null, $l : null){
+    @if $t != null{
+        padding-top : $t
+    }
 
+    @if $r != null{
+        padding-right : $r
+    }
+
+    @if $b != null{
+        padding-bottom : $b
+    }
+    
+    @if $l != null{
+        padding-left : $l
+    }
+}
+
+@mixin displayPropertySet($display : null){
+    @if $display != null{
+        display: $display;
+    }
+}
+
+@mixin a_hyperStyle($color, $hover-color){
+    text-decoration: none; 
+    color: $color;         
+
+    &:hover {
+        color: $hover-color; 
+    }
+}

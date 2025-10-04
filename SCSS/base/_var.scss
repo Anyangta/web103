@@ -1,5 +1,6 @@
 $font-style: "Verdana", "Geneva", sans-serif;
-$indexElement : sizeElement, positioningProperties,  fontElement, borderElement, backgroundElement, marginElement;
+$indexElement : sizeElement, positioningProperties,  fontElement, borderElement, backgroundElement, marginElement , displayElement,
+colorElement, paddingElement;
 
 $headerClass : (
     "name" : header,
@@ -59,7 +60,21 @@ $headerClass : (
                         "bottom": 0px 
                     ),
                     "paddingElement": ( 
-                        "padding-bottom": 15px 
+                        "bottom": 15px 
+                    ),
+
+                    "children": (
+                        "header_globalBar_li" : (
+                            "name" : header_globalBar_li,
+                            "marginElement" :(
+                                "right" : 45px
+                            ),
+                            "displayElement" : (
+                                "display" : inline
+                            ),
+
+
+                        )
                     )
                 ),
 
@@ -71,9 +86,23 @@ $headerClass : (
                     "positioningProperties": ( 
                         "top": 20px, 
                         "right": 30px 
+                    ),
+
+                    "children": (
+                        "header_MenuBar_li" : (
+                            "name" : header_MenuBar_li,
+                            "marginElement" :(
+                                "right" : 15px
+                            ),
+                            "displayElement" : (
+                                "display" : inline
+                            ),
+                            "colorElement" :(
+                                "opacity" : 0.3
+                            )
+                        )
                     )
                 )
-
             )
         )
     )

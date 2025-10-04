@@ -27,9 +27,19 @@ header .headerInnerBox .globalBar {
   position: absolute;
   right: 0px;
   bottom: 0px;
+  padding-bottom: 15px;
+}
+header .headerInnerBox .globalBar .header_globalBar_li {
+  margin-right: 45px;
+  display: inline;
 }
 header .headerInnerBox .MenuBar {
   position: absolute;
   top: 20px;
   right: 30px;
+}
+header .headerInnerBox .MenuBar .header_MenuBar_li {
+  margin-right: 15px;
+  display: inline;
+  opacity: 0.3;
 }/*# sourceMappingURL=index.css.map */
