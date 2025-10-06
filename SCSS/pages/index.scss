@@ -13,3 +13,7 @@ body{
 #{map.get($mainImgClass, "name")}{
     @include CreateNestedRules($mainImgClass);
 }
+
+#{map.get($sectionClass, "name")}{
+    @include CreateNestedRules($sectionClass);
+}

@@ -9,7 +9,8 @@
                 @include boxSizeSet(
                     map.get($elementProps, "position"),
                     map.get($elementProps, "width"),
-                    map.get($elementProps, "height")
+                    map.get($elementProps, "height"),
+                    map.get($elementProps, "overflow")
                 );
             }
             
@@ -26,7 +27,7 @@
                 @include fontPropertySet(
                     map.get($elementProps, "font-size"),
                     map.get($elementProps, "font-weight"),
-                    map.get($elementProps, "line-height")
+                    map.get($elementProps, "line-height"),
                 );
             } 
             
@@ -62,7 +63,8 @@
 
             @else if $elementName == "displayElement"{
                 @include displayPropertySet(
-                    map.get($elementProps, "display")
+                    map.get($elementProps, "display"),
+                    map.get($elementProps, "float")
                 )
             }
 
@@ -83,6 +85,12 @@
             @else if $elementName == "imgElement"{
                 @include imgPropertSet(
                     map.get($elementProps, "object-fit")
+                )
+            }
+
+            @else if $elementName == "textElement"{
+                @include textPropertSet(
+                    map.get($elementProps, "text-align")
                 )
             }
         }
@@ -115,7 +123,7 @@
     }
 }
 
-@mixin boxSizeSet($pos : null, $w : null, $h : null){
+@mixin boxSizeSet($pos : null, $w : null, $h : nul, $overflow : null){
     @if $pos != null{
         position: $pos;
     }
@@ -126,6 +134,10 @@
 
     @if $h != null{
         height: $h;
+    }
+
+    @if $overflow != null{
+        overflow: $overflow;
     }
 }
 
@@ -216,9 +228,13 @@
     }
 }
 
-@mixin displayPropertySet($display : null){
+@mixin displayPropertySet($display : null, $float : null){
     @if $display != null{
         display: $display;
+    }
+
+    @if $float != null{
+        float: $float;
     }
 }
 
@@ -235,5 +251,11 @@
 @mixin imgPropertSet($object-fit : null){
     @if $object-fit != null{
         object-fit: $object-fit;
+    }
+}
+
+@mixin textPropertSet($text-align : null){
+    @if $text-align != null{
+        text-align: center;
     }
 }

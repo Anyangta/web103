@@ -1,6 +1,6 @@
 $font-style: "Verdana", "Geneva", sans-serif;
 $indexElement : sizeElement, positioningProperties,  fontElement, borderElement, backgroundElement, marginElement , displayElement,
-colorElement, paddingElement, a_hyperStyle, imgElement;
+colorElement, paddingElement, a_hyperStyle, imgElement, textElement;
 
 $headerClass : (
     "name" : header,
@@ -188,9 +188,74 @@ $mainImgClass : (
                 )
             )
         )
-
-        
-
-
     )
-)
+);
+
+$sectionClass : (
+    "name" : section,
+    "sizeElement" : (
+        "width" : 1180px,
+        "height" : 450px,
+        "overflow" : hidden
+    ),
+    "marginElement" :(
+        "top" : 0px,
+        "right" : auto,
+        "bottom" : 0px,
+        "left" : auto
+    ),
+    "displayElement" :(
+        "display" : block
+    ),
+    "selectors" :(
+        "h2" :(
+            "name" : h2,
+            "paddingElement" :(
+                "top" : 30px,
+                "bottom" : 30px
+            ),
+            "fontElement" : (
+                "font-weight" : bold,
+            ),
+            "textElement" :(
+                "text-align" : center
+            )
+        ),
+
+        "article":(
+            "name" : article,
+            "paddingElement" :(
+                "left" : 32.5px,
+                "right" : 32.5px
+            ),
+            "sizeElement" :(
+                "width" : 230px
+            ),
+            "displayElement" :(
+                "display" : block,
+                "float" : left
+            ),
+            "selectors":(
+                "h3" :(
+                    "name" : h3,
+                    "fontElement" : (
+                        "font-weight" : bold,
+                    ),
+                    "marginElement" :(
+                        "top" : 10px,
+                        "right" : 0px,
+                        "bottom" : 10px,
+                        "left" : 0px
+                    ),
+                ),
+                "p" :(
+                    "name" : p,
+                    "fontElement" :(
+                        "line-height": 1.3
+                    )
+                )
+            )
+        )
+    )
+);
+
