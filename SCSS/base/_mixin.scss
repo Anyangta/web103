@@ -25,7 +25,8 @@
             @else if $elementName == "fontElement"{
                 @include fontPropertySet(
                     map.get($elementProps, "font-size"),
-                    map.get($elementProps, "font-weight")
+                    map.get($elementProps, "font-weight"),
+                    map.get($elementProps, "line-height")
                 );
             } 
             
@@ -146,12 +147,15 @@
     }
 }
 
-@mixin fontPropertySet($size: null, $weight: null){
+@mixin fontPropertySet($size: null, $weight: null, $line-height : null){
     @if $size != null {
         font-size: $size;
     }
     @if $weight != null {
         font-weight: $weight;
+    }
+    @if $line-height != null{
+        line-height: $line-height;
     }
 }
 

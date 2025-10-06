@@ -125,6 +125,10 @@ $mainImgClass : (
         "height" : 590px
     ),
 
+    "displayElement" :(
+        "display" : block
+    ),
+
     "selectors" :(
         "img" :(
             "name" : img,
@@ -143,6 +147,7 @@ $mainImgClass : (
         "mainInnerBox" : (
             "name" : mainInnerBox,
             "sizeElement" : (
+                "position" : absolute,
                 "width" : 800px,
                 "height" : 300px
             ),
@@ -151,9 +156,41 @@ $mainImgClass : (
                 "right" : auto,
                 "bottom" : 0px,
                 "left" : auto
+            ),
+            "positioningProperties": ( 
+                "top" : 150px,
+                "right": 0px, 
+                "left": 0px 
+            ),
+
+            "selectors" :(
+                "h1" :(
+                    "name" : h1,
+                    "fontElement" :(
+                        "font-size" : 80px,
+                        "line-height": 1.3
+                    ),
+                    "colorElement":(
+                        "color" : white
+                    )
+                ),
+
+                "p" :(
+                    "name" : p,
+                    "fontElement" :(
+                        "font-size" : 25px,
+                        "line-height": 1.3
+                    ),
+                    "colorElement":(
+                        "color" : white
+                        
+                    )
+                )
             )
-
-
         )
+
+        
+
+
     )
 )
