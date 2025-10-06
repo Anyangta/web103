@@ -1,0 +1,11 @@
+@use '../lib/hub' as *;
+@use 'sass:map';
+
+body{
+    font-family: $font-style;
+}
+
+#{map.get($headerClass, "name")}{
+    @include CreateNestedRules($headerClass);
+}
+
