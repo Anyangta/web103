@@ -1,6 +1,7 @@
 @use '../lib/hub' as *;
 @use 'sass:map';
-
+@use 'sass:list';
+ 
 body{
     font-family: $font-style;
 }
@@ -11,4 +12,23 @@ body{
 
 header{
     position: fixed;
+    z-index: 2;
+}
+
+#{map.get($gallery_sectionClass, "name")}{
+    @include CreateNestedRules($gallery_sectionClass);
+}
+
+section{
+    @for $i from 1 through list.length($gallery-articles) {
+        article:nth-child(#{$i}) {
+            // 3. 리스트에서 현재 순번에 해당하는 스타일 맵을 가져옵니다.
+            $styleMap: list.nth($gallery-articles, $i);
+
+            
+            
+            // 5. 해당 순번의 개별 스타일을 덮어씌웁니다.
+            @include ApplyProperties($styleMap);
+        }
+    }
 }

@@ -53,4 +53,59 @@ header .headerInnerBox .MenuBar li {
 
 header {
   position: fixed;
+  z-index: 2;
+}
+
+section {
+  width: 1000px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding-top: 10px;
+}
+section article {
+  position: relative;
+  margin-top: 10px;
+  float: left;
+}
+section article p {
+  position: absolute;
+}
+
+section article:nth-child(1) {
+  width: 700px;
+  height: 400px;
+}
+section article:nth-child(2) {
+  width: 290px;
+  height: 190px;
+}
+section article:nth-child(3) {
+  width: 290px;
+  height: 95px;
+}
+section article:nth-child(4) {
+  width: 290px;
+  height: 95px;
+}
+section article:nth-child(5) {
+  width: 500px;
+  height: 490px;
+}
+section article:nth-child(6) {
+  width: 490px;
+  height: 240px;
+}
+section article:nth-child(7) {
+  width: 490px;
+  height: 240px;
+}
+section article:nth-child(8) {
+  width: 1000px;
+  height: 371px;
+}
+section article:nth-child(9) {
+  width: 1000px;
+  height: 361px;
 }/*# sourceMappingURL=gallery.css.map */

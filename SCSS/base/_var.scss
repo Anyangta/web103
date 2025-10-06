@@ -350,3 +350,64 @@ $footerClass :(
         )
     )
 );
+
+$gallery_sectionClass:(
+    "name" : section,
+    "sizeElement" :(
+        "width" : 1000px
+    ),
+    "marginElement" :(
+        "top" : 0px,
+        "right" : auto,
+        "bottom" : 0px,
+        "left" : auto
+    ),
+    "paddingElement" :(
+        "top" : 10px,
+    ),
+    "selectors" :(
+        "article" :(
+            "name" : article,
+            "displayElement" :(
+                "float" : left
+            ),
+            "marginElement" :(
+                "top" : 10px,
+            ),
+            "sizeElement" :(
+                "position" : relative   
+            ),
+            "selectors":(
+                "p" :(
+                    "name" :p,
+                    "sizeElement" : (
+                        "position" : absolute
+                    ),
+                )
+            )
+        )
+    )
+);
+
+// B. 각 article의 개별 스타일을 순서대로 리스트에 담습니다.
+$gallery-articles: (
+    // 1번째 article
+    ("sizeElement": ( "width": 700px, "height": 400px )),
+    // 2번째 article
+    ("sizeElement": ( "width": 290px, "height": 190px )),
+    // 3번째 article
+    ("sizeElement": ( "width": 290px, "height": 95px )),
+    // 4번째 article
+    ("sizeElement": ( "width": 290px, "height": 95px )),
+    // 5번째 article
+    ("sizeElement": ( "width": 500px, "height": 490px )),
+    // 6번째 article
+    ("sizeElement": ( "width": 490px, "height": 240px )),
+    // 7번째 article
+    ("sizeElement": ( "width": 490px, "height": 240px )),
+    // 8번째 article
+    ("sizeElement": ( "width": 1000px, "height": 371px )),
+    // 9번째 article
+    ("sizeElement": ( "width": 1000px, "height": 361px ))
+);
+
