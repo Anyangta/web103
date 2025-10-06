@@ -119,4 +119,52 @@ section article h3 {
 }
 section article p {
   line-height: 1.3;
+}
+
+footer {
+  display: block;
+}
+footer .footerInnerBox {
+  position: relative;
+  width: 1000px;
+  height: 100px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+footer .footerInnerBox h1 {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  font-size: 32px;
+  font-weight: bold;
+}
+footer .footerInnerBox ul {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+footer .footerInnerBox ul li {
+  display: inline;
+}
+footer .footerInnerBox ul a {
+  color: black;
+  text-decoration: none;
+}
+footer .footerInnerBox ul a:hover {
+  color: blue;
+}
+footer .footer_info {
+  width: 1000px;
+  font-size: 12px;
+  line-height: 1.3;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding-top: 15px;
+  padding-right: 0px;
+  padding-bottom: 15px;
+  padding-left: 10px;
 }/*# sourceMappingURL=index.css.map */

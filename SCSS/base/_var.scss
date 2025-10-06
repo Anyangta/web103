@@ -259,3 +259,93 @@ $sectionClass : (
     )
 );
 
+$footerClass :(
+    "name" : footer,
+    "displayElement" :(
+        "display" : block
+    ),
+
+    "children":(
+        "footerInnerBox" :(
+            "name" : footerInnerBox,
+            "sizeElement" : (
+                "width" : 1000px,
+                "height" : 100px,
+                "position" : relative
+            ),
+            "marginElement" :(
+                "top" : 0px,
+                "right" : auto,
+                "bottom" : 0px,
+                "left" : auto
+            ),
+            "selectors" :(
+                "h1" :(
+                    "name" : h1,
+                    "sizeElement" : (
+                        "position" : absolute
+                    ),
+                    "positioningProperties": ( 
+                        "bottom": 15px, 
+                        "left": 10px 
+                    ),
+                    "fontElement" : (
+                        "font-weight" : bold,
+                        "font-size" : 32px
+                    )
+                ),
+                "ul" : (
+                    "name" : ul,
+                    "sizeElement" : (
+                        "position" : absolute
+                    ),
+                    "positioningProperties": ( 
+                        "right": 20px, 
+                        "bottom": 15px 
+                    ),
+                    "selectors" :(
+                        "li" :(
+                            "name" : li,
+                            "displayElement" :(
+                                "display" : inline
+                            ),
+                        ),
+                        "a" : (
+                            "name" : a,
+                            "colorElement" :(
+                                "color" : black
+                            ),
+
+                            "a_hyperStyle" :(
+                                "text-decoration" : none,
+                                "hover-color" : blue
+                            )
+                        )
+                    )
+                )
+            )
+        ),
+        "footer_info" :(
+            "name" : footer_info,
+            "sizeElement" : (
+                "width" : 1000px,
+            ),
+            "fontElement" : (
+                "font-size" : 12px,
+                "line-height" : 1.3
+            ),
+            "paddingElement" :(
+                "top" : 15px,
+                "right" : 0px,
+                "bottom" : 15px,
+                "left" : 10px
+            ),
+            "marginElement" :(
+                "top" : 0px,
+                "right" : auto,
+                "bottom" : 0px,
+                "left" : auto
+            )
+        )
+    )
+);

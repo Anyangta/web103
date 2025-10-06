@@ -17,3 +17,8 @@ body{
 #{map.get($sectionClass, "name")}{
     @include CreateNestedRules($sectionClass);
 }
+
+#{map.get($footerClass, "name")}{
+    @include CreateNestedRules($footerClass);
+    
+}
