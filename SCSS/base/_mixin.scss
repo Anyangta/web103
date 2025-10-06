@@ -90,7 +90,8 @@
 
             @else if $elementName == "textElement"{
                 @include textPropertSet(
-                    map.get($elementProps, "text-align")
+                    map.get($elementProps, "text-align"),
+                    map.get($elementProps, "text-shadow")
                 )
             }
         }
@@ -254,8 +255,11 @@
     }
 }
 
-@mixin textPropertSet($text-align : null){
+@mixin textPropertSet($text-align : null, $text-shadow : null){
     @if $text-align != null{
         text-align: center;
+    }
+    @if $text-shadow != null{
+        text-shadow: $text-shadow;
     }
 }

@@ -363,7 +363,7 @@ $gallery_sectionClass:(
         "left" : auto
     ),
     "paddingElement" :(
-        "top" : 10px,
+        "top" : 120px,
     ),
     "selectors" :(
         "article" :(
@@ -383,31 +383,99 @@ $gallery_sectionClass:(
                     "sizeElement" : (
                         "position" : absolute
                     ),
+                    "colorElement" :(
+                        "color" : white
+                    ),
+                    "fontElement" : (
+                        "font-size" : 30px
+                    )
+                )
+            ),
+            "children" :(
+                "innerbox" : (
+                    "name" : innerbox,
+                    "sizeElement" : (
+                        "position" : absolute,
+                        "width" : 450px,
+                        "height" : 150px
+                    ),
+                    "positioningProperties": ( 
+                        "right": 30px, 
+                        "bottom": 40px 
+                    ),
+                    "fontElement" :(
+                        "line-height" : 2
+                    ),
+                    "selectors" : (
+                        "p" : (
+                            "name" : p,
+                            "fontElement" : (
+                                "font-size" : 20px
+                            )
+                        ),
+                        "span" :(
+                            "name" : span,
+                            "fontElement" : (
+                                "font-size" : 30px
+                            )
+                        )
+                    )
                 )
             )
         )
     )
+
 );
 
-// B. 각 article의 개별 스타일을 순서대로 리스트에 담습니다.
 $gallery-articles: (
-    // 1번째 article
-    ("sizeElement": ( "width": 700px, "height": 400px )),
-    // 2번째 article
-    ("sizeElement": ( "width": 290px, "height": 190px )),
-    // 3번째 article
-    ("sizeElement": ( "width": 290px, "height": 95px )),
-    // 4번째 article
-    ("sizeElement": ( "width": 290px, "height": 95px )),
-    // 5번째 article
-    ("sizeElement": ( "width": 500px, "height": 490px )),
-    // 6번째 article
-    ("sizeElement": ( "width": 490px, "height": 240px )),
-    // 7번째 article
-    ("sizeElement": ( "width": 490px, "height": 240px )),
-    // 8번째 article
-    ("sizeElement": ( "width": 1000px, "height": 371px )),
-    // 9번째 article
-    ("sizeElement": ( "width": 1000px, "height": 361px ))
+    ("sizeElement": ("width": 700px, "height": 400px),
+    "marginElement" : ("right" : 10px),
+    ),
+
+    ("sizeElement": ("width": 290px, "height": 190px)),
+    
+    ("sizeElement": ("width": 290px, "height": 95px)),
+
+    ("sizeElement": ("width": 290px, "height": 95px)),
+
+    ("sizeElement": ("width": 500px, "height": 490px),
+    "displayElement" :("float" : right),
+    ),
+
+    ("sizeElement": ("width": 490px, "height": 240px)),
+
+    ("sizeElement": ("width": 490px, "height": 240px)),
+
+    ("sizeElement": ("width": 1000px, "height": 371px)),
+
+    ("sizeElement": ("width": 1000px, "height": 361px))
 );
 
+$gallery-articles-p :(
+    ("positioningProperties": ("right": 10px, "bottom": 10px),
+    ),
+
+    ("positioningProperties": ("top": 50px, "left": 10px),
+    ),
+
+    ("positioningProperties": ("right": 10px, "bottom": 20px),
+    ),
+
+    (),
+
+    (),
+
+    ("positioningProperties": ("top": 160px, "left": 90px),
+    "fontElement" :("font-size" : 16px, "line-height" : 1.3, "font-weight" : bold),
+    "colorElement" : ("color" : black)
+    ),
+
+    ("positioningProperties": ("right": 20px, "bottom": 30px),
+    "colorElement" : ("color" : gold)
+    ),
+
+    ("positioningProperties": ("top": 165px, "left": 160px),
+    "fontElement" :("font-size" : 50px),
+    "textElement" : ("text-shadow" : 1px 1px black)
+    )
+)
