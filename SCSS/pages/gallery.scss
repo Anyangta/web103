@@ -9,3 +9,6 @@ body{
     @include CreateNestedRules($headerClass);
 }
 
+header{
+    position: fixed;
+}

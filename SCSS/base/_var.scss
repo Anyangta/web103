@@ -12,6 +12,9 @@ $headerClass : (
     "borderElement" :(
         "border-bottom" : 1px solid black
     ),
+    "backgroundElement": (
+        "background-color": white
+    ),
 
     "children": (
         "headerInnerBox": (
@@ -23,9 +26,7 @@ $headerClass : (
                 "height": 120px
             ),
 
-            "backgroundElement": (
-                "background-color": white
-            ),
+            
 
             "marginElement" : (
                 "top" : 0px,

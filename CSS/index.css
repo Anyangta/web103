@@ -5,12 +5,12 @@ body {
 header {
   width: 100%;
   border-bottom: 1px solid black;
+  background-color: white;
 }
 header .headerInnerBox {
   position: relative;
   width: 1180px;
   height: 120px;
-  background-color: white;
   margin-top: 0px;
   margin-right: auto;
   margin-bottom: 0px;
