@@ -20,16 +20,22 @@ header{
         }
 
         .globalBar{
+            @include boxSet($innerBox-wigth/2,$innerBox-height/4);
             @include positionSet(map-get($header-innerBoxClass,"globalBar-position")...);
             li{
-
-
-
+                display: inline;
+                @include margin(0 ($innerBox-wigth/2)/($header-globolBar-liCnt*$header-globolBar-liCnt*2) 0);
             }
         }
         
         .menuBar{
             @include positionSet(map-get($header-innerBoxClass,"menuBar-position")...);
+            @include boxSet($innerBox-wigth/4);
+            li{
+                display: inline;
+                @include margin(0 ($innerBox-wigth/4)/($header-menuBar-liCnt*$header-menuBar-liCnt*4) 0);
+                @include colorSet(null,null,0.5);
+            }
         }
     }    
 }

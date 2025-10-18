@@ -9,7 +9,7 @@
     }
 }
 
-@mixin colorSet($background-color : null, $color : null){
+@mixin colorSet($background-color : null, $color : null , $opacity : null){
     @if $background-color != null{
         background-color: $background-color;
     }
@@ -17,25 +17,28 @@
     @if $color != null{
         color: $color;
     }
+    @if $opacity != null{
+        opacity : $opacity;
+    }
 }
 
-@mixin margin($values...) {
+@mixin margin($values...){
     margin: $values;
 }
 
-@mixin positionSet($type: null, $top: null, $right: null, $bottom: null, $left: null) {
+@mixin positionSet($type: null, $top: null, $right: null, $bottom: null, $left: null){
     position: $type;
 
-    @if $top != null {
+    @if $top != null{
         top: $top;
     }
-    @if $right != null {
+    @if $right != null{
         right: $right;
     }
-    @if $bottom != null {
+    @if $bottom != null{
         bottom: $bottom;
     }
-    @if $left != null {
+    @if $left != null{
         left: $left;
     }
 }
