@@ -7,5 +7,11 @@ body{
 
 header{
     @include boxSet($SemanticTag-wigth);
-    
+    @include colorSet(map-get($colorList,"headerLayoutColor"));
+
+    .innerBox{
+        @include boxSet($innerBox-wigth,$innerBox-height);
+        @include margin($marginCenter);
+
+    }    
 }

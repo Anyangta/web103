@@ -1,1 +1,1 @@
-{"version":3,"sources":["../SCSS/pages/index.scss","../SCSS/base/_var.scss","index.css","../SCSS/base/_mixin.scss"],"names":[],"mappings":"AAEA;EACI,wCCHW;EDIX,eAAA;AEDJ;;AFIA;EGHQ,WFFa;ACKrB","file":"index.css"}
+{"version":3,"sources":["../SCSS/pages/index.scss","../SCSS/base/_var.scss","index.css","../SCSS/base/_mixin.scss"],"names":[],"mappings":"AAEA;EACI,wCCHW;EDIX,eAAA;AEDJ;;AFIA;EGHQ,WFFa;EEWb,qBHJc;AEDtB;AFGI;EGPI,aAAA;EAGA,aFFW;EEiBf,cHTI;AEAR","file":"index.css"}

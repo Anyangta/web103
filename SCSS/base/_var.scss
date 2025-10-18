@@ -1,9 +1,11 @@
 $font-family : verdana, geneva, sans-serif;
 
 $SemanticTag-wigth : 100%;
+
 $innerBox-wigth : 1180px;
 $innerBox-height : 120px;
 
+$marginCenter : 0 auto;
 
 $font-sizeList : (
     "font-12" : 12px,
@@ -13,5 +15,5 @@ $font-sizeList : (
 );
 
 $colorList : (
-    "headerLayoutColor" : white
+    "headerLayoutColor" : red
 );

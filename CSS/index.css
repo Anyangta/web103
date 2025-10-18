@@ -5,4 +5,10 @@ body {
 
 header {
   width: 100%;
+  background-color: red;
+}
+header .innerBox {
+  width: 1180px;
+  height: 120px;
+  margin: 0 auto;
 }/*# sourceMappingURL=index.css.map */
