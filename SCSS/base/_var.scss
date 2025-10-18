@@ -7,13 +7,19 @@ $innerBox-height : 120px;
 
 $marginCenter : 0 auto;
 
-$font-sizeList : (
+$font-sizeMap : (
     "font-12" : 12px,
     "font-16" : 16px,
     "font-32" : 32px,
     "font-60" : 60px
 );
 
-$colorList : (
-    "headerLayoutColor" : red
+$colorMap : (
+    "headerLayoutColor" : white
+);
+
+$header-innerBoxClass : (
+    "h1-position" : absolute null null 15px 10px,
+    "globalBar-position" : absolute null 0px 0px null,
+    "menuBar-position" : absolute 20px 30px null null
 );

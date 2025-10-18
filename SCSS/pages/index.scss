@@ -2,16 +2,32 @@
 
 body{
     font-family: $font-family;
-    font-size: map-get($font-sizeList,"font-16");
+    font-size: map-get($font-sizeMap,"font-16");
 }
 
 header{
     @include boxSet($SemanticTag-wigth);
-    @include colorSet(map-get($colorList,"headerLayoutColor"));
+    @include colorSet(map-get($colorMap,"headerLayoutColor"));
 
     .innerBox{
         @include boxSet($innerBox-wigth,$innerBox-height);
         @include margin($marginCenter);
+        @include positionSet(relative);
 
+        h1{
+            @include positionSet(map-get($header-innerBoxClass,"h1-position")...);
+            font-size : map-get($font-sizeMap, "font-32");
+        }
+
+        .globalBar{
+            @include positionSet(map-get($header-innerBoxClass,"globalBar-position")...);
+            li{
+                display: inline;
+            }
+        }
+        
+        .menuBar{
+            @include positionSet(map-get($header-innerBoxClass,"menuBar-position")...);
+        }
     }    
 }
