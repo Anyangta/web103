@@ -1,2 +1,11 @@
 @use '../lib/hub' as *;
 
+body{
+    font-family: $font-family;
+    font-size: map-get($font-sizeList,"font-16");
+}
+
+header{
+    @include boxSet($SemanticTag-wigth);
+    
+}

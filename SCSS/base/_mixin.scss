@@ -1,1 +1,20 @@
 @use './var' as *;
+
+@mixin boxSet($w : null, $h : null){
+    @if $w != null{
+        width: $w;
+    }
+    @if $h != null {
+        height: $h;
+    }
+}
+
+@mixin colorSet($background-color : null, $color : null){
+    @if $background-color != null{
+        background-color: $background-color;
+    }
+
+    @if $color != null{
+        color: $color;
+    }
+}
