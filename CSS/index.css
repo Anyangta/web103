@@ -24,9 +24,6 @@ header .innerBox .globalBar {
   right: 0px;
   bottom: 0px;
 }
-header .innerBox .globalBar li {
-  display: inline;
-}
 header .innerBox .menuBar {
   position: absolute;
   top: 20px;

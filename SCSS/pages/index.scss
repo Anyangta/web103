@@ -22,7 +22,9 @@ header{
         .globalBar{
             @include positionSet(map-get($header-innerBoxClass,"globalBar-position")...);
             li{
-                display: inline;
+
+
+
             }
         }
         
