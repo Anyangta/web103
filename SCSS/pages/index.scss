@@ -18,22 +18,25 @@ header{
             @include positionSet(map-get($header-innerBoxClass,"h1-position")...);
             font-size : map-get($font-sizeMap, "font-32");
         }
-
         .globalBar{
             @include boxSet($innerBox-wigth/2,$innerBox-height/4);
             @include positionSet(map-get($header-innerBoxClass,"globalBar-position")...);
+            padding-right: $header-globolBar-liCnt * 4px;
             li{
-                display: inline;
-                @include margin(0 ($innerBox-wigth/2)/($header-globolBar-liCnt*$header-globolBar-liCnt*2) 0);
+                display: inline-block;
+                @include boxSet(calc(($innerBox-wigth/2)/$header-globolBar-liCnt) - $header-globolBar-liCnt);
+                @include margin(0);
+                text-align: center;
             }
         }
-        
         .menuBar{
             @include positionSet(map-get($header-innerBoxClass,"menuBar-position")...);
-            @include boxSet($innerBox-wigth/4);
+            @include boxSet($innerBox-wigth/3);
             li{
-                display: inline;
-                @include margin(0 ($innerBox-wigth/4)/($header-menuBar-liCnt*$header-menuBar-liCnt*4) 0);
+                display: inline-block;
+                @include boxSet(calc(($innerBox-wigth/3)/$header-menuBar-liCnt) - $header-menuBar-liCnt);
+                @include margin(0);
+                text-align: center;
                 @include colorSet(null,null,0.5);
             }
         }

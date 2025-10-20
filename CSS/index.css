@@ -25,19 +25,24 @@ header .innerBox .globalBar {
   position: absolute;
   right: 0px;
   bottom: 0px;
+  padding-right: 20px;
 }
 header .innerBox .globalBar li {
-  display: inline;
-  margin: 0 11.8px 0;
+  display: inline-block;
+  width: 113px;
+  margin: 0;
+  text-align: center;
 }
 header .innerBox .menuBar {
   position: absolute;
   top: 20px;
   right: 30px;
-  width: 295px;
+  width: 393.3333333333px;
 }
 header .innerBox .menuBar li {
-  display: inline;
-  margin: 0 2.95px 0;
+  display: inline-block;
+  width: 73.6666666667px;
+  margin: 0;
+  text-align: center;
   opacity: 0.5;
 }/*# sourceMappingURL=index.css.map */
