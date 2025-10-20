@@ -25,6 +25,10 @@
     margin: $values;
 }
 
+@mixin padding($values...){
+    padding: $values;
+}
+
 @mixin positionSet($type: null, $top: null, $right: null, $bottom: null, $left: null){
     position: $type;
 

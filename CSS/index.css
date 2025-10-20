@@ -17,7 +17,7 @@ header .innerBox .globalBar li a:hover {
   color: blue;
 }
 
-main .innerBox h1, header .innerBox h1 {
+section .innerBox h1, main .innerBox h1, header .innerBox h1 {
   font-weight: bold;
 }
 
@@ -91,4 +91,16 @@ section .innerBox {
   height: 450px;
   margin: 0 auto;
   position: relative;
+}
+section .innerBox h1 {
+  width: 1180px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}
+section .innerBox article {
+  width: 295px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 32.5px 0 32.5px;
 }/*# sourceMappingURL=index.css.map */
