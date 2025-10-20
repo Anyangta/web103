@@ -3,21 +3,21 @@ body {
   font-size: 16px;
 }
 
-header .innerBox .menuBar li, header .innerBox .globalBar li {
+footer .innerBox ul li, header .innerBox .menuBar li, header .innerBox .globalBar li {
   display: inline-block;
   margin: 0;
   text-align: center;
 }
 
-header .innerBox .globalBar li a {
+footer .innerBox ul li a, header .innerBox .globalBar li a {
   text-decoration: none;
   color: black;
 }
-header .innerBox .globalBar li a:hover {
+footer .innerBox ul li a:hover, header .innerBox .globalBar li a:hover {
   color: blue;
 }
 
-section .innerBox article h3, section .innerBox h1, main .innerBox h1, header .innerBox h1 {
+footer .innerBox h1, section .innerBox article h3, section .innerBox h1, main .innerBox h1, header .innerBox h1 {
   font-weight: bold;
 }
 
@@ -109,4 +109,25 @@ section .innerBox article h3 {
 }
 section .innerBox article p {
   line-height: 1.3;
+}
+
+footer {
+  width: 100%;
+}
+footer .innerBox {
+  width: 1180px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+footer .innerBox h1 {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  font-size: 32px;
+}
+footer .innerBox ul {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
 }/*# sourceMappingURL=index.css.map */

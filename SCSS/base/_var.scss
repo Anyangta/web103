@@ -39,6 +39,7 @@ $main-innerBoxClass :(
     "innerBox-position" : absolute 150px 0px null 0px
 );
 
-$section-innerBoxClass: (
-    
-)
+$footer-innerBoxClass :(
+    "h1-position" : absolute null null 15px 10px,
+    "ul-position"  : absolute null 20px 15px null
+);

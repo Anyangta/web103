@@ -110,3 +110,26 @@ section{
     }
 }
 
+footer{
+    @include boxSet($SemanticTag-wigth);
+    .innerBox{
+        @include boxSet($innerBox-wigth,$innerBox-height);
+        @include margin($marginCenter);
+        @include positionSet(relative);
+
+        h1{
+            @include positionSet(map-get($footer-innerBoxClass,"h1-position")...);
+            font-size : map-get($font-sizeMap, "font-32");
+            @extend %h1-stlye;
+        }
+        ul{
+            @include positionSet(map-get($footer-innerBoxClass,"ul-position")...);
+            li{
+                @extend %li-stlye;
+                a{
+                    @extend %a-stlye;
+                }
+            }
+        }
+    }
+}
