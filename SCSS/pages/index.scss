@@ -113,7 +113,7 @@ section{
 footer{
     @include boxSet($SemanticTag-wigth);
     .innerBox{
-        @include boxSet($innerBox-wigth,$innerBox-height);
+        @include boxSet($innerBox-wigth - 180 ,$innerBox-height);
         @include margin($marginCenter);
         @include positionSet(relative);
 
@@ -130,6 +130,10 @@ footer{
                     @extend %a-stlye;
                 }
             }
+        }
+        p{
+            line-height: $line-height;
+            font-size : map-get($font-sizeMap, "font-12");
         }
     }
 }
