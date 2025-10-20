@@ -61,3 +61,13 @@ header{
         }
     }    
 }
+
+section{
+    @include boxSet($SemanticTag-wigth);
+    .innerBox{
+        @include boxSet($innerBox-wigth - $innerBox-sub);
+        @include margin($marginCenter);
+        @include positionSet(relative);
+        @include padding($innerBox-height);
+    }
+}

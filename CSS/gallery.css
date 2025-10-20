@@ -58,4 +58,14 @@ header .innerBox .menuBar {
 header .innerBox .menuBar li {
   width: 73.6666666667px;
   opacity: 0.5;
+}
+
+section {
+  width: 100%;
+}
+section .innerBox {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 120px;
 }/*# sourceMappingURL=gallery.css.map */
