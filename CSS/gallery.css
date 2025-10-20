@@ -1,1 +1,61 @@
-/*# sourceMappingURL=gallery.css.map */
+body {
+  font-family: verdana, geneva, sans-serif;
+  font-size: 16px;
+}
+
+header .innerBox .menuBar li, header .innerBox .globalBar li {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+}
+
+header .innerBox .globalBar li a {
+  text-decoration: none;
+  color: black;
+}
+header .innerBox .globalBar li a:hover {
+  color: blue;
+}
+
+header .innerBox h1 {
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+}
+header .innerBox {
+  width: 1180px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+}
+header .innerBox h1 {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  font-size: 32px;
+}
+header .innerBox .globalBar {
+  width: 590px;
+  height: 30px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding-right: 20px;
+}
+header .innerBox .globalBar li {
+  width: 113px;
+}
+header .innerBox .menuBar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 393.3333333333px;
+}
+header .innerBox .menuBar li {
+  width: 73.6666666667px;
+  opacity: 0.5;
+}/*# sourceMappingURL=gallery.css.map */

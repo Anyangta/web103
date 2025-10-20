@@ -1,0 +1,63 @@
+@use '../lib/hub' as *;
+
+body{
+    font-family: $font-family;
+    font-size: map-get($font-sizeMap,"font-16");
+}
+
+%li-stlye{
+    display: inline-block;
+    @include margin(0);
+    text-align: center;
+}
+
+%a-stlye{
+    text-decoration: none;
+    @include colorSet($options: (color : map-get($colorMap,"font-black")));
+    &:hover{
+        @include colorSet($options: (color : map-get($colorMap,"aHoverColor")));
+    }
+}
+
+%h1-stlye{
+    font-weight : bold;
+}
+
+header{
+    @include boxSet($SemanticTag-wigth);
+    @include colorSet($options: (background-color : map-get($colorMap,"headerLayoutColor")));
+    @include positionSet(fixed);
+
+    .innerBox{
+        @include boxSet($innerBox-wigth,$innerBox-height);
+        @include margin($marginCenter);
+        @include positionSet(relative);
+
+        h1{
+            @include positionSet(map-get($header-innerBoxClass,"h1-position")...);
+            font-size : map-get($font-sizeMap, "font-32");
+            @extend %h1-stlye;
+        }
+        .globalBar{
+            @include boxSet($innerBox-wigth/2,$innerBox-height/4);
+            @include positionSet(map-get($header-innerBoxClass,"globalBar-position")...);
+            padding-right: $header-globolBar-liCnt * 4px;
+            li{
+                @extend %li-stlye;
+                @include boxSet(calc(($innerBox-wigth/2)/$header-globolBar-liCnt) - $header-globolBar-liCnt);
+                a{
+                    @extend %a-stlye;
+                }
+            }
+        }
+        .menuBar{
+            @include positionSet(map-get($header-innerBoxClass,"menuBar-position")...);
+            @include boxSet($innerBox-wigth/3);
+            li{
+                @extend %li-stlye;
+                @include boxSet(calc(($innerBox-wigth/3)/$header-menuBar-liCnt) - $header-menuBar-liCnt);
+                @include colorSet($options: (opacity: $opacity));
+            }
+        }
+    }    
+}
