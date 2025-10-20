@@ -9,16 +9,15 @@
     }
 }
 
-@mixin colorSet($background-color : null, $color : null , $opacity : null){
-    @if $background-color != null{
-        background-color: $background-color;
+@mixin colorSet($options: ()){ 
+    @if map-has-key($options, background-color) {
+        background-color: map-get($options, background-color);
     }
-
-    @if $color != null{
-        color: $color;
+    @if map-has-key($options, color) {
+        color: map-get($options, color);
     }
-    @if $opacity != null{
-        opacity : $opacity;
+    @if map-has-key($options, opacity) {
+        opacity: map-get($options, opacity);
     }
 }
 

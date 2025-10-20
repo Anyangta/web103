@@ -9,20 +9,31 @@ $marginCenter : 0 auto;
 
 $header-globolBar-liCnt : 5;
 $header-menuBar-liCnt : 5;
+$line-height : 1.3;
+$opacity : 0.5;
 
 $font-sizeMap : (
     "font-12" : 12px,
     "font-16" : 16px,
+    "font-25" : 25px,
     "font-32" : 32px,
-    "font-60" : 60px
+    "font-60" : 60px,
+    "font-80" : 80px
 );
 
 $colorMap : (
-    "headerLayoutColor" : white
+    "headerLayoutColor" : white,
+    "aHoverColor" : blue,
+    "font-white" : white,
+    "font-black" : black
 );
 
 $header-innerBoxClass : (
     "h1-position" : absolute null null 15px 10px,
     "globalBar-position" : absolute null 0px 0px null,
     "menuBar-position" : absolute 20px 30px null null
+);
+
+$main-innerBoxClass :(
+    "innerBox-position" : absolute 150px 0px null 0px
 );
