@@ -96,9 +96,17 @@ section{
         }
         article{
             @include boxSet($innerBox-wigth/4);
-            text-align: center;
+            float: left;
+            @include padding(0 ($innerBox-wigth/4 - 230)/2 0 ($innerBox-wigth/4 - 230)/2);
             box-sizing: border-box;
-            @include padding(0 ($innerBox-wigth/4 - 230)/2 0 ($innerBox-wigth/4 - 230)/2 );
+            h3{
+                @extend %h1-stlye;
+                @include margin($section-article-h3-margin);
+            }
+            p{
+                line-height: $line-height;
+            }
         }
     }
 }
+
