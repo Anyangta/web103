@@ -68,7 +68,6 @@ section{
     .innerBox{
         @include boxSet($innerBox-wigth - $innerBox-sub);
         @include margin($marginCenter);
-        @include positionSet(relative);
         @include padding($innerBox-height);
 
         $i: 1;
@@ -79,6 +78,7 @@ section{
             article:nth-child(#{$i}) {
                 @include boxSet($w, $h);
                 @include margin($section-article-margin 0 0 0);
+                @include positionSet(relative);
                 float: left;
                 background-image: url(nth($gallery-articles-imgList,$i));
 
@@ -93,5 +93,28 @@ section{
             $i: $i + 1;
         }
 
+        @each $index, $position-values in $gallery-articles-p-positionMap{
+            article:nth-child(#{$index}) p{
+                @include positionSet($position-values...);
+                font-size: map-get($font-sizeMap,"font-32");
+                @include colorSet($options: (color : map-get($colorMap,"font-white")));
+
+                @if $index == 6{
+                    font-size: map-get($font-sizeMap,"font-16");
+                    @include colorSet($options: (color : map-get($colorMap,"font-black")));
+                    line-height: $line-height;
+                    @extend %h1-stlye;
+                }
+
+                @if $index == 7{
+                    @include colorSet($options: (color : map-get($colorMap,"font-gold")));
+                }
+
+                @if $index == 8{
+                    font-size: map-get($font-sizeMap,"font-50");
+                    text-shadow: black 1px 1px;
+                }
+            }
+        }
     }
 }
