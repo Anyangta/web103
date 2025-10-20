@@ -80,3 +80,12 @@ main{
         }
     }
 }
+
+section{
+    @include boxSet($SemanticTag-wigth);
+    .innerBox{
+        @include boxSet($innerBox-wigth,$innerBox-height*4 - 30px);
+        @include margin($marginCenter);
+        @include positionSet(relative);
+    }
+}
