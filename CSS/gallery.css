@@ -25,6 +25,7 @@ header {
   width: 100%;
   background-color: white;
   position: fixed;
+  z-index: 2;
 }
 header .innerBox {
   width: 1180px;
@@ -68,4 +69,69 @@ section .innerBox {
   margin: 0 auto;
   position: relative;
   padding: 120px;
+}
+section .innerBox article:nth-child(1) {
+  width: 700px;
+  height: 400px;
+  margin: 10px 0 0 0;
+  float: left;
+  background-image: url("../../Quest/700x400.png");
+  margin: 10px 10px 0 0;
+}
+section .innerBox article:nth-child(2) {
+  width: 290px;
+  height: 190px;
+  margin: 10px 0 0 0;
+  float: left;
+  background-image: url("../../Quest/290x190.png");
+}
+section .innerBox article:nth-child(3) {
+  width: 290px;
+  height: 95px;
+  margin: 10px 0 0 0;
+  float: left;
+  background-image: url("../../Quest/290x95-1.png");
+}
+section .innerBox article:nth-child(4) {
+  width: 290px;
+  height: 95px;
+  margin: 10px 0 0 0;
+  float: left;
+  background-image: url("../../Quest/290x95-2.png");
+}
+section .innerBox article:nth-child(5) {
+  width: 500px;
+  height: 490px;
+  margin: 10px 0 0 0;
+  float: left;
+  background-image: url("../../Quest/500x490.png");
+  float: right;
+}
+section .innerBox article:nth-child(6) {
+  width: 490px;
+  height: 240px;
+  margin: 10px 0 0 0;
+  float: left;
+  background-image: url("../../Quest/490x240-1.png");
+}
+section .innerBox article:nth-child(7) {
+  width: 490px;
+  height: 240px;
+  margin: 10px 0 0 0;
+  float: left;
+  background-image: url("../../Quest/490x240-2.png");
+}
+section .innerBox article:nth-child(8) {
+  width: 1000px;
+  height: 371px;
+  margin: 10px 0 0 0;
+  float: left;
+  background-image: url("../../Quest/1000x371.png");
+}
+section .innerBox article:nth-child(9) {
+  width: 1000px;
+  height: 361px;
+  margin: 10px 0 0 0;
+  float: left;
+  background-image: url("../../Quest/1000x361.png");
 }/*# sourceMappingURL=gallery.css.map */

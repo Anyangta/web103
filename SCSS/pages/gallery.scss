@@ -27,6 +27,7 @@ header{
     @include boxSet($SemanticTag-wigth);
     @include colorSet($options: (background-color : map-get($colorMap,"headerLayoutColor")));
     @include positionSet(fixed);
+    z-index: 2;
 
     .innerBox{
         @include boxSet($innerBox-wigth,$innerBox-height);
@@ -69,5 +70,28 @@ section{
         @include margin($marginCenter);
         @include positionSet(relative);
         @include padding($innerBox-height);
+
+        $i: 1;
+        @each $size in $gallery-articles-sizeList{
+            $w: nth($size, 1);
+            $h: nth($size, 2);
+            
+            article:nth-child(#{$i}) {
+                @include boxSet($w, $h);
+                @include margin($section-article-margin 0 0 0);
+                float: left;
+                background-image: url(nth($gallery-articles-imgList,$i));
+
+                @if $i == 1{
+                    @include margin($section-article-margin $section-article-margin 0 0);
+                }
+
+                @if $i == 5{
+                    float : right;
+                }
+            }
+            $i: $i + 1;
+        }
+
     }
 }
