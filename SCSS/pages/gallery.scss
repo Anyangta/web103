@@ -45,7 +45,7 @@ header{
             padding-right: $header-globolBar-liCnt * 4px;
             li{
                 @extend %li-stlye;
-                @include boxSet(calc(($innerBox-wigth/2)/$header-globolBar-liCnt) - $header-globolBar-liCnt);
+                @include boxSet(calc(($innerBox-wigth/2)/$header-globolBar-liCnt) - $header-globolBar-liCnt * 1px);
                 a{
                     @extend %a-stlye;
                 }
@@ -56,7 +56,7 @@ header{
             @include boxSet($innerBox-wigth/3);
             li{
                 @extend %li-stlye;
-                @include boxSet(calc(($innerBox-wigth/3)/$header-menuBar-liCnt) - $header-menuBar-liCnt);
+                @include boxSet(calc(($innerBox-wigth/3)/$header-menuBar-liCnt) - $header-menuBar-liCnt * 1px);
                 @include colorSet($options: (opacity: $opacity));
             }
         }
