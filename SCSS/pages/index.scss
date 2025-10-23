@@ -66,7 +66,7 @@ main{
     background-image: url('../../Quest/bg_main.png');
     @include positionSet(relative);
     .innerBox{
-        @include boxSet($innerBox-wigth - 380px,$innerBox-height*3 - 60px);
+        @include boxSet($innerBox-wigth - $innerBox-height*3, $innerBox-height*3 - $innerBox-height/2);
         @include margin($marginCenter);
         @include positionSet(map-get($main-innerBoxClass,"innerBox-position")...);
         @include colorSet($options: (color : map-get($colorMap,"font-white")));
