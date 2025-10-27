@@ -1,0 +1,15 @@
+:root{
+    --semanticTagWidth : 100%;
+    --innerBoxWidth : 1180px;
+}
+
+body{
+    --font-family : sans-serif;
+    --bodyMargin : 0px;
+
+    font-family: var(--font-family);
+    margin: var(--bodyMargin);
+}
+
+
+
