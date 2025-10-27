@@ -18,17 +18,37 @@ body{
 
 header, section, main, footer{
     width: var(--semanticTagWidth);
+
+    .innerBox{
+        width: var(--innerBoxWidth);
+        margin: var(--marginCenter);
+        position: relative;
+    }
 }
 
-.innerBox{
-    width: var(--innerBoxWidth);
-    margin: var(--marginCenter);
-    position: relative;
-
+header .innerBox{
     padding-bottom: 6%;
 
     ul,h1{
         position: absolute;
+    }
+}
+
+main{
+    background-image: url("./Quest/bg_main.png");
+    .innerBox{
+        * {
+            color: white;
+            padding-left: 10%;
+        }
+        h1{
+            padding-top: 10%;
+            font-size: 80px;
+        }
+        p{
+            font-size: 25px;
+            padding-bottom: 10%;
+        }
     }
 }
 
@@ -38,7 +58,6 @@ ul{
 
 li{
         float: left;
-         
         text-align: right;
         display: block;
 }
@@ -53,7 +72,7 @@ a{
 }
 
 header .innerBox h1{
-    bottom: 0px;
+    bottom: 10px;
     left: 10px;
 }
 
@@ -62,7 +81,7 @@ header .innerBox .globalBar{
 
     width: 50%;
     right: 0px;
-    bottom: 0px;
+    bottom: 10px;
 
     li{
         width: calc(100% / var(--cnt));
@@ -73,7 +92,7 @@ header .innerBox .globalBar{
 header .innerBox .menuBar{
     --cnt : 5;
 
-    width: 50%;
+    width: 40%;
     top: 20px;
     right: 0px;
     opacity: 50%;
