@@ -2,6 +2,7 @@
     --semanticTagWidth : 100%;
     --innerBoxWidth : 1180px;
     --marginCenter : 0 auto;
+    
 }
 
 * {
@@ -50,6 +51,29 @@ main{
             padding-bottom: 10%;
         }
     }
+}
+
+section{
+    .innerBox{
+        h3{
+            text-align: center;
+            padding: 20px 0px;
+        }
+        
+        
+    }
+}
+
+article{
+    --cnt : 4;
+    --articleImg : 230px;
+    --width : calc(var(--innerBoxWidth) / var(--cnt));
+    --padding : calc((var(--width) - var(--articleImg)) / 2 ); 
+
+    width:  var(--width);
+    padding: 0px var(--padding);
+    float: left;
+    box-sizing: border-box;
 }
 
 ul{
