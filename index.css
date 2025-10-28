@@ -55,6 +55,12 @@ main{
 
 section{
     .innerBox{
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
         h3{
             text-align: center;
             padding: 20px 0px;
@@ -62,7 +68,6 @@ section{
         article{
             float: left;
         }
-        
     }
 }
 
