@@ -53,6 +53,7 @@ header, section, main, footer{
 }
 
 header{
+    background-color: white;
     .innerBox{
         padding-top: 8%;
 
@@ -110,11 +111,7 @@ main{
 
 section{
     .innerBox{
-        &::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
+        overflow: hidden;
 
         h3{
             text-align: center;

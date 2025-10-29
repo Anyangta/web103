@@ -2,7 +2,6 @@
     --semanticTagWidth : 100%;
     --innerBoxWidth : 1180px;
     --marginCenter : 0 auto;
-    
 }
 
 *{
@@ -17,7 +16,7 @@ body{
     font-family: var(--font-family);
 }
 
-header, section, main, footer{
+header, section{
     width: var(--semanticTagWidth);
 
     .innerBox{
@@ -48,6 +47,77 @@ header, section, main, footer{
         }
         h1{
             position: absolute;
+        }
+    }
+}
+
+header{
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+
+    .innerBox{
+        padding-top: 8%;
+
+        ul{
+            width: 50%;
+        }
+
+        li{
+            text-align: right;
+            width: calc(100% / var(--cnt));
+        }
+
+        h1{
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .globalBar{
+            --cnt : 5;
+
+            right: 0px;
+            bottom: 10px;
+        }
+
+        .menuBar{
+            --cnt : 5;
+
+            top: 20px;
+            right: 0px;
+            opacity: 50%;
+        }
+
+    }
+}
+
+article{
+    position: relative;
+    float: left;
+    p{
+        position: absolute;
+    }
+
+    img{
+        display: block;  
+    }
+}
+
+section{
+    padding: 10%;
+    .innerBox{
+        padding-right: 180px;
+        overflow: hidden;
+        article{
+            margin-top: 10px;
+
+            p{
+                color: white;
+            }
+
+            &.right{
+                float: right;
+            }
         }
     }
 }
