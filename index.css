@@ -118,19 +118,20 @@ section{
             padding: 20px 0px;
         }
         article{
-            float: left;
+            --cnt : 4;
+            --articleImg : 230px;
+            --width : calc(var(--innerBoxWidth) / var(--cnt));
+            --padding : calc((var(--width) - var(--articleImg)) / 2 ); 
+
+            width:  var(--width);
+            padding: 0px var(--padding);
         }
     }
 }
 
 article{
-    --cnt : 4;
-    --articleImg : 230px;
-    --width : calc(var(--innerBoxWidth) / var(--cnt));
-    --padding : calc((var(--width) - var(--articleImg)) / 2 ); 
-
-    width:  var(--width);
-    padding: 0px var(--padding);
+    position: relative;
+    float: left;
 }
 
 footer{
@@ -140,10 +141,12 @@ footer{
             top: 15px;
             left: 10px;
         }
+
         ul{
             top: 30px;
             right: 20px;
         }
+        
         li{
             margin-right: 30px;
         }

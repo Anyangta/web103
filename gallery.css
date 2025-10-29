@@ -94,22 +94,23 @@ header{
 article{
     position: relative;
     float: left;
-    p{
-        position: absolute;
-    }
-
-    img{
-        display: block;  
-    }
 }
 
 section{
     padding-top: 10%;
     .innerBox{
-        padding-right: 180px;
+        padding: 0px 90px;
         overflow: hidden;
         article{
             margin-top: 10px;
+
+            p{
+                position: absolute;
+            }
+
+            img{
+                display: block;  
+            }
 
             &[class]{
                 color: white;
