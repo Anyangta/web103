@@ -104,20 +104,70 @@ article{
 }
 
 section{
-    padding: 10%;
+    padding-top: 10%;
     .innerBox{
         padding-right: 180px;
         overflow: hidden;
         article{
             margin-top: 10px;
 
-            p{
+            &[class]{
                 color: white;
+                font-size: 30px;
+                font-weight: bold;
             }
 
             &.right{
                 float: right;
             }
+
+            &.p1{
+                margin-right: 10px;
+                p{
+                    right: 10px;
+                    bottom: 10px;
+                }
+            }
+
+            &.p2 p{
+                top: 50px;
+                left: 10px;
+            }
+
+            &.p3 p{
+                right: 10px;
+                bottom: 20px;
+            }
+
+            &.p4 p{
+                top: 160px;
+                left: 90px;
+                font-size: 16px;
+                color: black;
+            }
+
+            &.p5 p{
+                right: 20px;
+                bottom: 30px;
+                color: gold;
+            }
+
+            &.p6 p{
+                top: 165px;
+                left: 160px;
+                font-size: 50px;
+                text-shadow: black 1px 1px;
+            }
+
+            &.p7 p{
+                right: 80px;
+                bottom: 80px;
+                line-height: 2.0;
+                span{
+                    font-size: 20px;
+                }
+            }
+
         }
     }
 }
