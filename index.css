@@ -5,7 +5,7 @@
     
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,12 +30,12 @@ header, section, main, footer{
         }
 
         ul{
+            position: absolute;
             list-style: none;
         }
 
         li{
             float: left;
-            text-align: right;
         }
 
         a{
@@ -46,25 +46,57 @@ header, section, main, footer{
                 color: blue;
             }
         }
+        h1{
+            position: absolute;
+        }
     }
 }
 
-header .innerBox{
-    padding-bottom: 8%;
+header{
+    .innerBox{
+        padding-top: 8%;
 
-    ul,h1{
-        position: absolute;
+        ul{
+            width: 50%;
+        }
+
+        li{
+            text-align: right;
+            width: calc(100% / var(--cnt));
+        }
+
+        h1{
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .globalBar{
+            --cnt : 5;
+
+            right: 0px;
+            bottom: 10px;
+        }
+
+        .menuBar{
+            --cnt : 5;
+
+            top: 20px;
+            right: 0px;
+            opacity: 50%;
+        }
+
     }
 }
+
 
 main{
     background-image: url("./Quest/bg_main.png");
     .innerBox{
         * {
             color: white;
-            padding-left: 10%;
+            padding: 0px 10%;
         }
-        h1{
+        h2{
             padding-top: 10%;
             font-size: 80px;
         }
@@ -72,6 +104,7 @@ main{
             font-size: 25px;
             padding-bottom: 10%;
         }
+        
     }
 }
 
@@ -105,41 +138,19 @@ article{
 
 footer{
     .innerBox{
+        padding-top: 4%;
         h1{
-            
+            top: 15px;
+            left: 10px;
+        }
+        ul{
+            top: 30px;
+            right: 20px;
+        }
+        li{
+            margin-right: 30px;
         }
     }
 }
 
 
-
-header .innerBox h1{
-    bottom: 10px;
-    left: 10px;
-}
-
-header .innerBox .globalBar{
-    --cnt : 5;
-
-    width: 50%;
-    right: 0px;
-    bottom: 10px;
-
-    li{
-        width: calc(100% / var(--cnt));
-    }
-    
-}
-
-header .innerBox .menuBar{
-    --cnt : 5;
-
-    width: 40%;
-    top: 20px;
-    right: 0px;
-    opacity: 50%;
-
-    li{
-        width: calc(100% / var(--cnt));
-    }
-}
