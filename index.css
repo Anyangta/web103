@@ -55,7 +55,9 @@ header, section, main, footer{
 header{
     background-color: white;
     .innerBox{
-        padding-top: 8%;
+        --innerPaddingTop : 8%;
+
+        padding-top: var(--innerPaddingTop);
 
         ul{
             width: 50%;
@@ -93,7 +95,7 @@ header{
 main{
     background-image: url("./Quest/bg_main.png");
     .innerBox{
-        * {
+        h2, p{
             color: white;
             padding: 0px 10%;
         }
