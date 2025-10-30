@@ -9,3 +9,9 @@
 body{
     font-family: $fontFamily;
 }
+
+@each $i in $semanticTagList{
+    #{$i}{
+        width: $semanticTagWidth;
+    }
+}
