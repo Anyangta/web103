@@ -1,0 +1,7 @@
+@use 'var' as *;
+
+*{
+    margin: $resetMargin;
+    padding: $resetPadding;
+    box-sizing: border-box;
+}
