@@ -1,4 +1,4 @@
-@mixin boxSizeSet($w, $h){
+@mixin boxSizeSet($w : null, $h : null){
     @if $w != null{
         width: $w;
     }
@@ -8,3 +8,6 @@
     }
 }
 
+@mixin marginSet($var : 0 auto){
+    margin : $var;
+}

@@ -1,4 +1,5 @@
 @use 'var' as *;
+@use 'mix' as *;
 
 *{
     margin: $resetMargin;
@@ -7,11 +8,39 @@
 }
 
 body{
-    font-family: $fontFamily;
+    font-family: $resetFontFamily;
 }
 
 @each $i in $semanticTagList{
     #{$i}{
-        width: $semanticTagWidth;
+        @include boxSizeSet($semanticTagWidth);
+
+        .innerBox{
+            @include boxSizeSet($innerBoxWidth);
+            @include marginSet($innerBoxMargin);
+            position: $innerBoxPosition;
+        }
     }
+}
+
+p{
+    line-height: $p-lineHeight;
+}
+
+ul{
+    position: $ul-position;
+    list-style: $ul-listStyle;
+}
+
+a{
+    color: $a-color;
+    text-decoration: $a-textDecoration;
+
+    &:hover{
+        color: $a-hoverColor;
+    }
+}
+
+h1{
+    position: $h1-position;
 }

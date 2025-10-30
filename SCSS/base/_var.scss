@@ -1,6 +1,6 @@
 $resetMargin : 0px;
 $resetPadding : 0px;
-$fontFamily : sans-serif;
+$resetFontFamily : sans-serif;
 
 $semanticTagList: (
     header, main, section, footer
@@ -8,4 +8,13 @@ $semanticTagList: (
 
 $semanticTagWidth : 100%;
 $innerBoxWidth : 1180px;
-$fontFamily : 0 auto;
+$innerBoxPosition : relative;
+$innerBoxMargin : 0 auto;
+
+$p-lineHeight : 1.3;
+$ul-position : absolute;
+$ul-listStyle : none;
+$a-color : black;
+$a-hoverColor : blue;
+$a-textDecoration : none;
+$h1-position : absolute;
