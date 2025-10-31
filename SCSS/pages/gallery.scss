@@ -1,1 +1,37 @@
 @use '../lib/hub' as *;
+
+header{
+    $backgroundColor : white;
+    
+    background-color: $backgroundColor;
+    position: fixed;
+    z-index: 1;
+    
+    .innerBox{
+        $globalCnt : 5;
+        $menuCnt : 5;
+        $cnt : $globalCnt, $menuCnt;
+
+        li{
+            text-align: right;
+            @each $i in $cnt{
+                width: 100% / $i;
+            }
+        }
+        h1{
+            bottom: 10px;
+            left: 10px;
+        }
+        .globalBar{
+            width: 50%;
+            right: 0px;
+            bottom: 10px;
+        }
+        .menuBar{
+            width: 40%;
+            top: 20px;
+            right: 0px;
+            opacity: 50%;
+        }
+    }
+}
