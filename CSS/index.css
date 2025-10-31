@@ -69,6 +69,10 @@ header .innerBox {
   padding: 8% 0px 0px 0px;
 }
 
+main .innerBox {
+  padding: 0px 10%;
+}
+
 header .innerBox li {
   text-align: right;
   width: 20%;
@@ -88,4 +92,19 @@ header .innerBox .menuBar {
   top: 20px;
   right: 0px;
   opacity: 50%;
+}
+
+main {
+  background-image: url("../../Quest/bg_main.png");
+}
+main .innerBox h2, main .innerBox p {
+  color: white;
+}
+main .innerBox h2 {
+  padding-top: 10%;
+  font-size: 80px;
+}
+main .innerBox p {
+  font-size: 25px;
+  padding-bottom: 10%;
 }/*# sourceMappingURL=index.css.map */

@@ -29,3 +29,22 @@ header{
         }
     }
 }
+
+main{
+    background-image: url("../../Quest/bg_main.png");
+    .innerBox{
+        $fontColor : white;
+        
+        h2, p{
+            color: $fontColor;
+        }
+        h2{
+            padding-top: 10%;
+            font-size: 80px;
+        }
+        p{
+            font-size: 25px;
+            padding-bottom: 10%;
+        }
+    }
+}

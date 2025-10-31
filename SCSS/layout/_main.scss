@@ -2,9 +2,9 @@
 @use '../base/reset' as * ;
 @use '../base/mix' as *;
 
-header{
+main{
     .innerBox{
-        $headerPadding : 8% 0px 0px 0px;
-        @include paddingSet($headerPadding);
+        $padding : 0px 10%;
+        @include paddingSet($padding);
     }
 }

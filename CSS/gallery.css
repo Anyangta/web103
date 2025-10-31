@@ -67,4 +67,8 @@ li {
 
 header .innerBox {
   padding: 8% 0px 0px 0px;
+}
+
+main .innerBox {
+  padding: 0px 10%;
 }/*# sourceMappingURL=gallery.css.map */
