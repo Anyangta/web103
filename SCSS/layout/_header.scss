@@ -1,3 +1,11 @@
 @use '../base/var' as  *;
 @use '../base/reset' as * ;
 @use '../base/mix' as *;
+
+header{
+    $headerPadding : 8% 0px 0px 0px;
+
+    .innerBox{
+        @include paddingSet($headerPadding);
+    }
+}

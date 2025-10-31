@@ -11,3 +11,7 @@
 @mixin marginSet($var : 0 auto){
     margin : $var;
 }
+
+@mixin paddingSet($var : 0px){
+    padding : $var;
+}
