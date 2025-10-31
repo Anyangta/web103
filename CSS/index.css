@@ -81,6 +81,10 @@ section .innerBox article {
   float: left;
 }
 
+footer .innerBox {
+  padding: 4% 0px 0px 0px;
+}
+
 header .innerBox li {
   text-align: right;
   width: 20%;
@@ -124,4 +128,16 @@ section .innerBox h3 {
 section .innerBox article {
   width: 295px;
   padding: 0px 32.5px;
+}
+
+footer .innerBox h1 {
+  top: 15px;
+  left: 10px;
+}
+footer .innerBox ul {
+  top: 30px;
+  right: 20px;
+}
+footer .innerBox li {
+  margin-right: 30px;
 }/*# sourceMappingURL=index.css.map */

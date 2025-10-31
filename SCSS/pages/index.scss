@@ -69,3 +69,19 @@ section{
         }
     }
 }
+
+footer{
+    .innerBox{
+        h1{
+            top: 15px;
+            left: 10px;
+        }
+        ul{
+            top: 30px;
+            right: 20px;
+        }
+        li{
+            margin-right: 30px;
+        }
+    }
+}

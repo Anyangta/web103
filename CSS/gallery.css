@@ -79,4 +79,8 @@ section .innerBox {
 section .innerBox article {
   position: relative;
   float: left;
+}
+
+footer .innerBox {
+  padding: 4% 0px 0px 0px;
 }/*# sourceMappingURL=gallery.css.map */
