@@ -24,10 +24,6 @@ header, section{
         margin: var(--marginCenter);
         position: relative;
 
-        p{
-            line-height: 1.3;
-        }
-
         ul{
             position: absolute;
             list-style: none;

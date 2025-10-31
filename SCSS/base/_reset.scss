@@ -23,10 +23,6 @@ body{
     }
 }
 
-p{
-    line-height: $p-lineHeight;
-}
-
 ul{
     position: $ul-position;
     list-style: $ul-listStyle;
@@ -43,4 +39,8 @@ a{
 
 h1{
     position: $h1-position;
+}
+
+li{
+    float : $li-float;
 }
