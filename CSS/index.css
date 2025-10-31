@@ -73,6 +73,14 @@ main .innerBox {
   padding: 0px 10%;
 }
 
+section .innerBox {
+  overflow: hidden;
+}
+section .innerBox article {
+  position: relative;
+  float: left;
+}
+
 header .innerBox li {
   text-align: right;
   width: 20%;
@@ -107,4 +115,13 @@ main .innerBox h2 {
 main .innerBox p {
   font-size: 25px;
   padding-bottom: 10%;
+}
+
+section .innerBox h3 {
+  text-align: center;
+  padding: 20px 0px;
+}
+section .innerBox article {
+  width: 295px;
+  padding: 0px 32.5px;
 }/*# sourceMappingURL=index.css.map */

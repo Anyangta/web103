@@ -1,0 +1,14 @@
+@use '../base/var' as  *;
+@use '../base/reset' as * ;
+@use '../base/mix' as *;
+
+section{
+    .innerBox{
+        overflow: hidden;
+
+        article{
+            position: relative;
+            float: left;
+        }
+    }
+}

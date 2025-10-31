@@ -48,3 +48,24 @@ main{
         }
     }
 }
+
+section{
+    .innerBox{
+        h3{
+            $padding : 20px 0px;
+
+            text-align: center;
+            @include paddingSet($padding);
+        }
+
+        article{
+            $cnt : 4;
+            $articleImg : 230px;
+            $width : $innerBoxWidth / $cnt;
+            $padding : ($width - $articleImg ) / 2; 
+
+            @include boxSizeSet($width);
+            @include paddingSet(0px $padding);
+        }
+    }
+}

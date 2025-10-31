@@ -71,4 +71,12 @@ header .innerBox {
 
 main .innerBox {
   padding: 0px 10%;
+}
+
+section .innerBox {
+  overflow: hidden;
+}
+section .innerBox article {
+  position: relative;
+  float: left;
 }/*# sourceMappingURL=gallery.css.map */
