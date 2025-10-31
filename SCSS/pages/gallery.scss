@@ -35,3 +35,76 @@ header{
         }
     }
 }
+
+section{
+    $padding : 10% 0px 0px 0px;
+    @include paddingSet($padding);
+    .innerBox{
+        $padding: 0px 90px;
+        @include paddingSet($padding);
+
+        article{
+            $margin : 10px 0px 0px 0px;
+            $p-positionList : (
+                (null 10px 10px null),
+                (50px null null 10px),
+                (null 10px 20px null),
+                (160px null null 90px),
+                (null 20px 30px null),
+                (165px null null 160px),
+                (null 80px 80px null)
+            );
+            $list-length: length($p-positionList);
+
+            @include marginSet($margin);
+
+            p{
+                position: absolute;
+                color: white;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            img{
+                display: block;  
+            }
+
+            &.right{
+                float: right;
+            }
+
+            @for $i from 1 through $list-length{
+                &.p#{$i} p{
+                    $position-value: nth($p-positionList, $i);
+                    @include positionSet($position-value...);
+                }
+            }
+
+            &.p1{
+                margin-right: 10px;
+            }
+
+            &.p4 p{
+                font-size: 16px;
+                color: black;
+            }
+
+            &.p5 p{
+                color: gold;
+            }
+
+            &.p6 p{
+                font-size: 50px;
+                text-shadow: black 1px 1px;
+            }
+
+            &.p7 p{
+                line-height: 2.0;
+                span{
+                    font-size: 20px;
+                }
+            }
+
+        }
+    }
+}

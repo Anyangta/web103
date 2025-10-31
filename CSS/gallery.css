@@ -109,4 +109,74 @@ header .innerBox .menuBar {
   top: 20px;
   right: 0px;
   opacity: 50%;
+}
+
+section {
+  padding: 10% 0px 0px 0px;
+}
+section .innerBox {
+  padding: 0px 90px;
+}
+section .innerBox article {
+  margin: 10px 0px 0px 0px;
+}
+section .innerBox article p {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+section .innerBox article img {
+  display: block;
+}
+section .innerBox article.right {
+  float: right;
+}
+section .innerBox article.p1 p {
+  right: 10px;
+  bottom: 10px;
+}
+section .innerBox article.p2 p {
+  top: 50px;
+  left: 10px;
+}
+section .innerBox article.p3 p {
+  right: 10px;
+  bottom: 20px;
+}
+section .innerBox article.p4 p {
+  top: 160px;
+  left: 90px;
+}
+section .innerBox article.p5 p {
+  right: 20px;
+  bottom: 30px;
+}
+section .innerBox article.p6 p {
+  top: 165px;
+  left: 160px;
+}
+section .innerBox article.p7 p {
+  right: 80px;
+  bottom: 80px;
+}
+section .innerBox article.p1 {
+  margin-right: 10px;
+}
+section .innerBox article.p4 p {
+  font-size: 16px;
+  color: black;
+}
+section .innerBox article.p5 p {
+  color: gold;
+}
+section .innerBox article.p6 p {
+  font-size: 50px;
+  text-shadow: black 1px 1px;
+}
+section .innerBox article.p7 p {
+  line-height: 2;
+}
+section .innerBox article.p7 p span {
+  font-size: 20px;
 }/*# sourceMappingURL=gallery.css.map */
