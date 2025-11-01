@@ -70,7 +70,7 @@ header .innerBox {
 }
 
 main .innerBox {
-  padding: 0px 10%;
+  padding: 10% 10%;
 }
 
 section .innerBox {
@@ -109,16 +109,12 @@ header .innerBox .menuBar {
 main {
   background-image: url("../../Quest/bg_main.png");
 }
-main .innerBox h2, main .innerBox p {
+main .innerBox {
   color: white;
+  font-size: 25px;
 }
 main .innerBox h2 {
-  padding-top: 10%;
   font-size: 80px;
-}
-main .innerBox p {
-  font-size: 25px;
-  padding-bottom: 10%;
 }
 
 section .innerBox h3 {
@@ -139,5 +135,5 @@ footer .innerBox ul {
   right: 20px;
 }
 footer .innerBox li {
-  margin-right: 30px;
+  margin: 0px 30px 0px 0px;
 }/*# sourceMappingURL=index.css.map */
