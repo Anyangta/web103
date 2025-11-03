@@ -5,7 +5,8 @@ header{
     
     background-color: $backgroundColor;
     position: fixed;
-    z-index: 1;
+    top : 0px;
+    left : 0px;
     
     .innerBox{
         $globalCnt : 5;
@@ -40,6 +41,7 @@ section{
     $padding : 10% 0px 0px 0px;
     @include paddingSet($padding);
     .innerBox{
+        position: none;
         $padding: 0px 90px;
         @include paddingSet($padding);
 

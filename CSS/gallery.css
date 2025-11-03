@@ -88,7 +88,8 @@ footer .innerBox {
 header {
   background-color: white;
   position: fixed;
-  z-index: 1;
+  top: 0px;
+  left: 0px;
 }
 header .innerBox li {
   text-align: right;
@@ -115,6 +116,7 @@ section {
   padding: 10% 0px 0px 0px;
 }
 section .innerBox {
+  position: none;
   padding: 0px 90px;
 }
 section .innerBox article {
